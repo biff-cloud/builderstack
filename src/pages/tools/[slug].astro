@@ -3,4 +3,11 @@ import Base from "../../layouts/Base.astro"; import tools from "../../data/tools
 export function getStaticPaths(){return tools.map(t=>({params:{slug:t.slug},props:{t}}));}
 const {t}=Astro.props;
 ---
-<Base title={`${t.name} — BuilderStack`} description={`${t.name}: ${t.desc} Category: ${t.category}. Pricing: ${t.pricing}.`}><h1>{t.name}</h1><p>{t.desc}</p><p>Category: {t.category} · Pricing: {t.pricing}</p><p><a href={t.url} rel="noopener">Visit {t.name} →</a></p></Base>
+<Base title={`${t.name} — BuilderStack`} description={`${t.name}: ${t.desc} Category: ${t.category}. Pricing: ${t.pricing}.`}>
+<h1>{t.name}</h1>
+<p>{t.desc}</p>
+<p>Category: {t.category} · Pricing: {t.pricing}</p>
+{t.freeTier && <p><b>Free tier:</b> {t.freeTier}</p>}
+{t.limits && <p><b>Limits:</b> {t.limits}</p>}
+<p><a href={t.url} rel="noopener">Visit {t.name} →</a></p>
+</Base>

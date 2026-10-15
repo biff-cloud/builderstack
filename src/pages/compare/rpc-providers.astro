@@ -1,0 +1,27 @@
+---
+import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json";
+const rpc = tools.filter(t => t.category === "RPC & Nodes");
+---
+<Base title="RPC providers compared — BuilderStack" description="Compare free tiers and limits for Alchemy, QuickNode, Infura, and Helius — crypto RPC & node providers on BuilderStack.">
+<h1>RPC providers compared</h1>
+<p>Side-by-side free-tier and limits notes for the RPC &amp; Nodes listings. Figures are concise public offerings and can change — always verify on the vendor site.</p>
+<table style="width:100%;border-collapse:collapse;font-size:.95rem">
+<thead><tr>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Provider</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Free tier</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Limits</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Pricing</th>
+</tr></thead>
+<tbody>
+{rpc.map(t => (
+<tr>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top"><a href={`${import.meta.env.BASE_URL}tools/${t.slug}/`}><b>{t.name}</b></a></td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{t.freeTier}</td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{t.limits}</td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{t.pricing}</td>
+</tr>
+))}
+</tbody>
+</table>
+<p><a href={`${import.meta.env.BASE_URL}category/rpc-nodes/`}>← All RPC &amp; Nodes</a></p>
+</Base>

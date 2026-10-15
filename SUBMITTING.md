@@ -33,6 +33,13 @@ Tools that developers use to build, run, secure or debug crypto applications:
 | `pricing` | One line, e.g. `Free + paid`, `Open source`, `Pay per query` |
 | `desc` | One short sentence (≤ ~120 chars), factual, no marketing superlatives |
 
+Optional fields:
+
+| Field | Description |
+|---|---|
+| `freeTier` | Short string, e.g. `Free: ~30M compute units/mo` or `Fully free (OSS)` |
+| `limits` | Short string on rate/usage caps, e.g. `~10 RPC req/s` or `See pricing page` |
+
 Existing categories: `RPC & Nodes`, `Data & Indexing`, `Security`, `Wallets & Custody`, `Oracles`, `Dev Frameworks`, `Frontend SDKs`, `Explorers`, `Debugging & Simulation`.
 
 ## How to submit (for now)
@@ -51,7 +58,9 @@ Each entry has this shape (`slug` is lowercase, hyphenated, unique):
   "url": "https://example.com",
   "category": "RPC & Nodes",
   "pricing": "Free + paid",
-  "desc": "One-sentence factual description of what it does for developers."
+  "desc": "One-sentence factual description of what it does for developers.",
+  "freeTier": "Free starter tier",
+  "limits": "See pricing page"
 }
 ```
 
