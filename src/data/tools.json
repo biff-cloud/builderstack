@@ -1,0 +1,23 @@
+[
+{"slug":"etherscan","name":"Etherscan","url":"https://etherscan.io","category":"Explorers","pricing":"Free + API tiers","desc":"Ethereum block explorer and contract verification."},
+{"slug":"tenderly","name":"Tenderly","url":"https://tenderly.co","category":"Debugging & Simulation","pricing":"Free + paid","desc":"Transaction simulation, debugging, monitoring, virtual testnets."},
+{"slug":"foundry","name":"Foundry","url":"https://getfoundry.sh","category":"Dev Frameworks","pricing":"Open source","desc":"Fast Solidity toolkit: forge, cast, anvil."},
+{"slug":"hardhat","name":"Hardhat","url":"https://hardhat.org","category":"Dev Frameworks","pricing":"Open source","desc":"Ethereum development environment and plugins."},
+{"slug":"alchemy","name":"Alchemy","url":"https://www.alchemy.com","category":"RPC & Nodes","pricing":"Free + paid","desc":"Node APIs, enhanced APIs, account abstraction."},
+{"slug":"quicknode","name":"QuickNode","url":"https://www.quicknode.com","category":"RPC & Nodes","pricing":"Free + paid","desc":"Multi-chain RPC endpoints and streams."},
+{"slug":"infura","name":"Infura","url":"https://www.infura.io","category":"RPC & Nodes","pricing":"Free + paid","desc":"Ethereum and IPFS API infrastructure by Consensys."},
+{"slug":"the-graph","name":"The Graph","url":"https://thegraph.com","category":"Data & Indexing","pricing":"Pay per query","desc":"Decentralized indexing via subgraphs."},
+{"slug":"dune","name":"Dune","url":"https://dune.com","category":"Data & Indexing","pricing":"Free + paid","desc":"SQL analytics and dashboards on onchain data."},
+{"slug":"defillama","name":"DefiLlama","url":"https://defillama.com","category":"Data & Indexing","pricing":"Free + Pro API","desc":"TVL, yields, fees and revenue across DeFi."},
+{"slug":"openzeppelin","name":"OpenZeppelin","url":"https://www.openzeppelin.com","category":"Security","pricing":"OSS + audits","desc":"Audited contract libraries and security audits."},
+{"slug":"slither","name":"Slither","url":"https://github.com/crytic/slither","category":"Security","pricing":"Open source","desc":"Static analyzer for Solidity by Trail of Bits."},
+{"slug":"safe","name":"Safe","url":"https://safe.global","category":"Wallets & Custody","pricing":"Free","desc":"Multisig smart accounts for teams and treasuries."},
+{"slug":"privy","name":"Privy","url":"https://www.privy.io","category":"Wallets & Custody","pricing":"Free + paid","desc":"Embedded wallets and auth for apps."},
+{"slug":"thirdweb","name":"thirdweb","url":"https://thirdweb.com","category":"Dev Frameworks","pricing":"Free + paid","desc":"SDKs, wallets, contracts and payments."},
+{"slug":"chainlink","name":"Chainlink","url":"https://chain.link","category":"Oracles","pricing":"Usage-based","desc":"Price feeds, VRF, CCIP cross-chain messaging."},
+{"slug":"pyth","name":"Pyth Network","url":"https://www.pyth.network","category":"Oracles","pricing":"Usage-based","desc":"Low-latency first-party price oracle."},
+{"slug":"wagmi","name":"wagmi","url":"https://wagmi.sh","category":"Frontend SDKs","pricing":"Open source","desc":"React hooks for Ethereum."},
+{"slug":"viem","name":"viem","url":"https://viem.sh","category":"Frontend SDKs","pricing":"Open source","desc":"TypeScript interface for Ethereum."},
+{"slug":"helius","name":"Helius","url":"https://www.helius.dev","category":"RPC & Nodes","pricing":"Free + paid","desc":"Solana RPCs, webhooks and DAS APIs."},
+{"slug":"nansen","name":"Nansen","url":"https://www.nansen.ai","category":"Data & Indexing","pricing":"Paid","desc":"Wallet-labeled onchain analytics."}
+]

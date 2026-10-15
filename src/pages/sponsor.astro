@@ -1,0 +1,7 @@
+---
+import Base from "../layouts/Base.astro";
+const offers=[["Featured category slot","Top of one category page, labeled Sponsored","$300 / month"],["Homepage hero slot","1 rotating slot (max 2 sponsors), all pages banner","$750 / month"],["Newsletter primary slot","Top placement, 60-word blurb + link","$250 / issue"],["Newsletter classified","3-line text ad","$75 / issue"],["Verified profile","Badge, extended profile, comparison table, changelog","$99 / month"],["Launch bundle","Homepage 2 weeks + 2 newsletter primaries + 1 comparison writeup","$1,200 one-off"]];
+---
+<Base title="Sponsor — BuilderStack"><h1>Sponsor BuilderStack</h1><p>Reach developers and technical founders choosing their crypto infra stack. Founding-sponsor pricing: 50% off the first month for the first 5 sponsors.</p>
+<table>{offers.map(o=><tr><td><b>{o[0]}</b></td><td>{o[1]}</td><td>{o[2]}</td></tr>)}</table>
+<p>No token/presale/casino ads. Rankings are never for sale. Contact: sponsor@ (placeholder).</p></Base>
