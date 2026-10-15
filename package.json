@@ -1,1 +1,1 @@
-{"name":"crypto-tools-dir","type":"module","private":true,"scripts":{"dev":"astro dev","build":"astro build"},"dependencies":{"astro":"^4.16.0"}}
+{"name":"crypto-tools-dir","type":"module","private":true,"scripts":{"dev":"astro dev","build":"astro build"},"dependencies":{"@astrojs/sitemap":"3.2.1","astro":"^4.16.0"}}

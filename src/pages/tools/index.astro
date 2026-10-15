@@ -1,4 +1,4 @@
 ---
 import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json";
 ---
-<Base title="All tools — BuilderStack"><h1>All tools ({tools.length})</h1>{tools.map(t=><div class="card"><a href={`${import.meta.env.BASE_URL}tools/${t.slug}/`}><b>{t.name}</b></a> · {t.category} — {t.desc}</div>)}</Base>
+<Base title="All tools — BuilderStack" description={`All ${tools.length} crypto developer infrastructure tools listed on BuilderStack, with category and pricing.`}><h1>All tools ({tools.length})</h1>{tools.map(t=><div class="card"><a href={`${import.meta.env.BASE_URL}tools/${t.slug}/`}><b>{t.name}</b></a> · {t.category} — {t.desc}</div>)}</Base>

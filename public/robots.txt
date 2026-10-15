@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://biff-cloud.github.io/builderstack/sitemap-index.xml
