@@ -1,0 +1,36 @@
+---
+import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json";
+// EVM indexing support checked on each vendor's public site/docs (2026-10-16).
+const picks = [
+  { slug: "ponder", src: "https://ponder.sh/", note: "Open-source TypeScript framework for custom EVM smart-contract indexing." },
+  { slug: "the-graph", src: "https://thegraph.com/docs/en/supported-networks/", note: "Subgraphs for Ethereum and many EVM networks; GraphQL query layer." },
+  { slug: "envio", src: "https://envio.dev/", note: "HyperIndex: event handlers in TypeScript across any EVM chain (plus Solana/Fuel)." },
+  { slug: "goldsky", src: "https://docs.goldsky.com/introduction", note: "Managed subgraphs and streaming pipelines; Ethereum and other EVM chains." },
+  { slug: "subquery", src: "https://subquery.network/networks", note: "Multi-chain indexer SDK; documents EVM support across many networks." },
+  { slug: "bitquery", src: "https://bitquery.io/", note: "Pre-indexed multi-chain GraphQL/streams; Ethereum and other EVM listed." },
+].map(p => ({ ...p, t: tools.find(t => t.slug === p.slug) })).filter(p => p.t);
+---
+<Base title="Best indexers for EVM — BuilderStack" description={`EVM indexers compared by free tier and pricing: ${picks.map(p => p.t.name).join(", ")}.`}>
+<h1>Best indexers for EVM</h1>
+<p>{picks.length} Data &amp; Indexing tools from the directory that index Ethereum / EVM chains. Order is editorial, not paid. Free tiers change, so verify on the vendor site.</p>
+<table style="width:100%;border-collapse:collapse;font-size:.95rem">
+<thead><tr>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Provider</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Why</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Free tier</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Pricing</th>
+</tr></thead>
+<tbody>
+{picks.map(p => (
+<tr>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top"><a href={`${import.meta.env.BASE_URL}tools/${p.t.slug}/`}><b>{p.t.name}</b></a></td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.note} <small><a href={p.src} rel="nofollow">EVM page</a></small></td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.t.freeTier}</td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.t.pricing}</td>
+</tr>
+))}
+</tbody>
+</table>
+<p>Building on EVM? See also <a href={`${import.meta.env.BASE_URL}tools/etherscan/`}>Etherscan</a>, <a href={`${import.meta.env.BASE_URL}tools/foundry/`}>Foundry</a> and <a href={`${import.meta.env.BASE_URL}tools/viem/`}>viem</a>.</p>
+<p><a href={`${import.meta.env.BASE_URL}category/data-indexing/`}>← Data &amp; Indexing</a></p>
+</Base>
