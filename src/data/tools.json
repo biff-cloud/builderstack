@@ -390,16 +390,6 @@
     "limits": "Request caps by plan; see site"
   },
   {
-    "slug": "blastapi",
-    "name": "Blast API",
-    "url": "https://blastapi.io",
-    "category": "RPC & Nodes",
-    "pricing": "Free + paid",
-    "desc": "Multi-chain RPC and APIs by Bware Labs.",
-    "freeTier": "Free public + Consumer plan",
-    "limits": "Rate limits by plan; see site"
-  },
-  {
     "slug": "drpc",
     "name": "dRPC",
     "url": "https://drpc.org",
@@ -408,16 +398,6 @@
     "desc": "Decentralized multi-chain RPC gateway.",
     "freeTier": "Free public RPC tier",
     "limits": "Rate limits by plan; see site"
-  },
-  {
-    "slug": "grove",
-    "name": "Grove",
-    "url": "https://grove.city",
-    "category": "RPC & Nodes",
-    "pricing": "Free + paid",
-    "desc": "RPC and data gateway built on Pocket Network.",
-    "freeTier": "Free starter tier",
-    "limits": "Relays / rate limits by plan; see site"
   },
   {
     "slug": "sourcify",
