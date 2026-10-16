@@ -14,7 +14,7 @@ const repo="https://github.com/biff-cloud/builderstack";
 <h2>Required fields</h2>
 <ul><li><code>name</code> — product name</li><li><code>url</code> — official homepage (https)</li><li><code>category</code> — one of: {cats.join(", ")} (or propose a new one)</li><li><code>pricing</code> — one line, e.g. "Free + paid", "Open source"</li><li><code>desc</code> — one short, factual sentence</li><li><code>freeTier</code> (optional) — short free-tier note</li><li><code>limits</code> (optional) — short rate/usage limits note</li></ul>
 <h2>How to submit</h2>
-<ol><li><a href={`${repo}/issues/new?title=${encodeURIComponent("Submit: <Tool name>")}`} rel="noopener">Open a GitHub issue</a> titled "Submit: &lt;Tool name&gt;" with the fields above, or</li><li>Open a pull request adding one entry to <a href={`${repo}/blob/main/src/data/tools.json`} rel="noopener"><code>src/data/tools.json</code></a>.</li></ol>
+<ol><li><a href={`${repo}/issues/new?template=submit-tool.yml`} rel="noopener">Open a GitHub issue</a> using the Submit a tool form (fields match the list above), or</li><li>Open a pull request adding one entry to <a href={`${repo}/blob/main/src/data/tools.json`} rel="noopener"><code>src/data/tools.json</code></a>.</li></ol>
 <p>Entry shape (<code>slug</code> is lowercase, hyphenated, unique):</p>
 <pre><code>{example}</code></pre>
 <p>Full guidelines: <a href={`${repo}/blob/main/SUBMITTING.md`} rel="noopener">SUBMITTING.md</a>.</p>

@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Full submission guidelines
+    url: https://github.com/biff-cloud/builderstack/blob/main/SUBMITTING.md
+    about: Scope, required fields, PR flow, and editorial policy

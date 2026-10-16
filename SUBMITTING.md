@@ -42,11 +42,11 @@ Optional fields:
 
 Existing categories: `RPC & Nodes`, `Data & Indexing`, `Security`, `Wallets & Custody`, `Oracles`, `Dev Frameworks`, `Frontend SDKs`, `Explorers`, `Debugging & Simulation`.
 
-## How to submit (for now)
+## How to submit
 
 Either:
 
-1. **Open a GitHub issue** at <https://github.com/biff-cloud/builderstack/issues/new> titled `Submit: <Tool name>` with the fields above, **or**
+1. **Open a GitHub issue** with the [Submit a tool](https://github.com/biff-cloud/builderstack/issues/new?template=submit-tool.yml) form (fields match the table above), **or**
 2. **Open a pull request** that adds one object to [`src/data/tools.json`](src/data/tools.json).
 
 Each entry has this shape (`slug` is lowercase, hyphenated, unique):

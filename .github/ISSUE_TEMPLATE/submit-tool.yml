@@ -1,0 +1,86 @@
+name: Submit a tool
+description: Suggest a crypto developer infrastructure tool for BuilderStack (free listing)
+title: "Submit: "
+labels: ["submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        BuilderStack is a curated directory of **developer infrastructure** for crypto builders. Listings are free. Rankings are never for sale.
+
+        **In scope:** RPC & nodes, data & indexing, security, wallets/custody/AA, oracles, SDKs & frameworks, explorers, debugging & simulation.
+
+        **Out of scope:** consumer dapps, tokens/presales/launchpads, casinos, exchanges as products, anything without a public developer site/docs.
+  - type: input
+    id: name
+    attributes:
+      label: Product name
+      description: As the vendor writes it
+      placeholder: Example Tool
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Official homepage
+      description: https URL
+      placeholder: https://example.com
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Pick the best fit, or choose Other and note a proposed category below
+      options:
+        - RPC & Nodes
+        - Data & Indexing
+        - Security
+        - Wallets & Custody
+        - Oracles
+        - Dev Frameworks
+        - Frontend SDKs
+        - Explorers
+        - Debugging & Simulation
+        - Other (propose below)
+    validations:
+      required: true
+  - type: input
+    id: category_other
+    attributes:
+      label: Proposed category (if Other)
+      description: Only if you selected Other
+      placeholder: e.g. Cross-chain messaging
+  - type: input
+    id: pricing
+    attributes:
+      label: Pricing (one line)
+      description: e.g. Free + paid, Open source, Pay per query
+      placeholder: Free + paid
+    validations:
+      required: true
+  - type: textarea
+    id: desc
+    attributes:
+      label: Short description
+      description: One factual sentence (≤ ~120 chars). No marketing superlatives.
+      placeholder: What it does for developers in one short sentence.
+    validations:
+      required: true
+  - type: input
+    id: free_tier
+    attributes:
+      label: Free tier (optional)
+      description: Short note, e.g. Free starter tier or Fully free (OSS)
+      placeholder: Free starter tier
+  - type: input
+    id: limits
+    attributes:
+      label: Limits (optional)
+      description: Short rate/usage caps note
+      placeholder: See pricing page
+  - type: textarea
+    id: notes
+    attributes:
+      label: Extra notes (optional)
+      description: Why it belongs, docs link, or anything else editors should know
