@@ -1,0 +1,37 @@
+---
+import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json";
+// Solana support checked on each vendor's Solana page (2026-10-16). Helius first: Solana-only.
+const picks = [
+  { slug: "helius", src: "https://www.helius.dev/", note: "Solana-only: RPC, webhooks, DAS (NFT/token) APIs." },
+  { slug: "quicknode", src: "https://www.quicknode.com/chains/sol", note: "Multi-chain; Solana endpoints plus streams and add-ons." },
+  { slug: "alchemy", src: "https://www.alchemy.com/solana", note: "Multi-chain; Solana RPC on the same account as EVM chains." },
+  { slug: "chainstack", src: "https://chainstack.com/build-better-with-solana/", note: "Managed Solana nodes; shared or dedicated." },
+  { slug: "getblock", src: "https://getblock.io/nodes/sol/", note: "Shared and dedicated Solana nodes." },
+  { slug: "drpc", src: "https://drpc.org/chainlist/solana", note: "Decentralized gateway with a public Solana endpoint." },
+  { slug: "ankr", src: "https://www.ankr.com/rpc/solana/", note: "Public and premium Solana RPC." },
+].map(p => ({ ...p, t: tools.find(t => t.slug === p.slug) })).filter(p => p.t);
+---
+<Base title="Best RPC providers for Solana — BuilderStack" description={`Solana RPC providers compared by free tier and limits: ${picks.map(p => p.t.name).join(", ")}.`}>
+<h1>Best RPC providers for Solana</h1>
+<p>{picks.length} RPC &amp; node providers from the directory that serve Solana mainnet. Order is editorial, not paid. Free tiers change, so verify on the vendor site.</p>
+<table style="width:100%;border-collapse:collapse;font-size:.95rem">
+<thead><tr>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Provider</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Why</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Free tier</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Pricing</th>
+</tr></thead>
+<tbody>
+{picks.map(p => (
+<tr>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top"><a href={`${import.meta.env.BASE_URL}tools/${p.t.slug}/`}><b>{p.t.name}</b></a></td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.note} <small><a href={p.src} rel="nofollow">Solana page</a></small></td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.t.freeTier}</td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.t.pricing}</td>
+</tr>
+))}
+</tbody>
+</table>
+<p>Building on Solana? See also <a href={`${import.meta.env.BASE_URL}tools/anchor/`}>Anchor</a>, <a href={`${import.meta.env.BASE_URL}tools/solana-web3-js/`}>Solana web3.js</a> and <a href={`${import.meta.env.BASE_URL}tools/solscan/`}>Solscan</a>.</p>
+<p><a href={`${import.meta.env.BASE_URL}compare/rpc-providers/`}>All RPC providers compared</a> · <a href={`${import.meta.env.BASE_URL}category/rpc-nodes/`}>← RPC &amp; Nodes</a></p>
+</Base>
