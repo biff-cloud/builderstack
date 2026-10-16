@@ -1,0 +1,17 @@
+---
+import Base from "../../layouts/Base.astro";
+// Keep in sync with the pages in this folder.
+const guides = [
+  { path: "rpc-for-evm/", title: "Best RPC providers for Ethereum & EVM", note: "Managed and public RPC for Ethereum mainnet and EVM chains." },
+  { path: "rpc-for-solana/", title: "Best RPC providers for Solana", note: "RPC and node providers with Solana support." },
+  { path: "indexer-for-evm/", title: "Best indexers for EVM", note: "Frameworks and hosted services for custom EVM indexing." },
+];
+---
+<Base title="Best tools by use case — BuilderStack" description={`Curated picks by use case: ${guides.map(g => g.title).join("; ")}.`}>
+<h1>Best tools by use case</h1>
+<p>Short, curated lists for one job each, with free tiers and pricing pulled from the directory. Order is editorial, not paid.</p>
+{guides.map(g => (
+<div class="card"><a href={`${import.meta.env.BASE_URL}best/${g.path}`}><b>{g.title}</b></a><br/><small>{g.note}</small></div>
+))}
+<p><a href={`${import.meta.env.BASE_URL}compare/rpc-providers/`}>All RPC providers compared</a> · <a href={`${import.meta.env.BASE_URL}tools/`}>All tools</a></p>
+</Base>
