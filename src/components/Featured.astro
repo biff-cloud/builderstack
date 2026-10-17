@@ -8,4 +8,4 @@ const {category,guide}=Astro.props;
 const today=new Date().toISOString().slice(0,10);
 const active=featured.filter(f=>f.start<=today&&today<f.end).map(f=>{const t=tools.find(x=>x.slug===f.slug);if(!t)throw new Error(`featured.json: unknown slug "${f.slug}"`);if(f.guide&&!GUIDES.includes(f.guide))throw new Error(`featured.json: unknown guide "${f.guide}"`);return {...t,guide:f.guide};}).filter(t=>guide?t.guide===guide:(!category||t.category===category));
 ---
-{active.length>0 && <section class="featured"><h2>Featured <small>(paid placement)</small></h2>{active.map(t=><div class="card sp"><b>Featured</b> · <a href={`${import.meta.env.BASE_URL}tools/${t.slug}/`}><b>{t.name}</b></a> — {t.desc} <small>({t.pricing})</small></div>)}</section>}
+{active.length>0 && <section class="featured"><h2>Featured <small>(paid placement)</small></h2>{active.map(t=><div class="card sp"><b>Featured</b> · <a href={`${import.meta.env.BASE_URL}tools/${t.slug}/`}><b>{t.name}</b></a> — {t.desc} <small>({t.pricing})</small>{t.verified && <small> · Verified {t.verified}</small>}</div>)}</section>}
