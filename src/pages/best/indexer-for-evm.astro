@@ -1,5 +1,5 @@
 ---
-import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json";
+import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json"; import Featured from "../../components/Featured.astro";
 // EVM indexing support checked on each vendor's public site/docs (2026-10-16).
 const picks = [
   { slug: "ponder", src: "https://ponder.sh/", note: "Open-source TypeScript framework for custom EVM smart-contract indexing." },
@@ -13,6 +13,7 @@ const picks = [
 <Base title="Best indexers for EVM — BuilderStack" description={`EVM indexers compared by free tier and pricing: ${picks.map(p => p.t.name).join(", ")}.`}>
 <h1>Best indexers for EVM</h1>
 <p>{picks.length} Data &amp; Indexing tools from the directory that index Ethereum / EVM chains. Order is editorial, not paid. Free tiers change, so verify on the vendor site.</p>
+<Featured guide="indexer-for-evm"/>
 <table style="width:100%;border-collapse:collapse;font-size:.95rem">
 <thead><tr>
 <th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Provider</th>

@@ -1,5 +1,5 @@
 ---
-import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json";
+import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json"; import Featured from "../../components/Featured.astro";
 // Solana support checked on each vendor's Solana page (2026-10-16). Helius first: Solana-only.
 const picks = [
   { slug: "helius", src: "https://www.helius.dev/", note: "Solana-only: RPC, webhooks, DAS (NFT/token) APIs." },
@@ -14,6 +14,7 @@ const picks = [
 <Base title="Best RPC providers for Solana — BuilderStack" description={`Solana RPC providers compared by free tier and limits: ${picks.map(p => p.t.name).join(", ")}.`}>
 <h1>Best RPC providers for Solana</h1>
 <p>{picks.length} RPC &amp; node providers from the directory that serve Solana mainnet. Order is editorial, not paid. Free tiers change, so verify on the vendor site.</p>
+<Featured guide="rpc-for-solana"/>
 <table style="width:100%;border-collapse:collapse;font-size:.95rem">
 <thead><tr>
 <th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Provider</th>

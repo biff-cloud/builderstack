@@ -1,5 +1,5 @@
 ---
-import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json";
+import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json"; import Featured from "../../components/Featured.astro";
 // Ethereum/EVM support checked on each vendor's Ethereum page (2026-10-16). Helius skipped: Solana-only. BlastAPI, Grove removed: discontinued.
 const picks = [
   { slug: "alchemy", src: "https://www.alchemy.com/ethereum", note: "Ethereum plus major L2s; enhanced APIs and account abstraction on one key." },
@@ -14,6 +14,7 @@ const picks = [
 <Base title="Best RPC providers for Ethereum & EVM — BuilderStack" description={`Ethereum and EVM RPC providers compared by free tier and limits: ${picks.map(p => p.t.name).join(", ")}.`}>
 <h1>Best RPC providers for Ethereum & EVM</h1>
 <p>{picks.length} RPC &amp; node providers from the directory that serve Ethereum mainnet and EVM chains. Order is editorial, not paid. Free tiers change, so verify on the vendor site.</p>
+<Featured guide="rpc-for-evm"/>
 <table style="width:100%;border-collapse:collapse;font-size:.95rem">
 <thead><tr>
 <th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Provider</th>
