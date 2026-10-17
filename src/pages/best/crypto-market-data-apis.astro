@@ -1,0 +1,33 @@
+---
+import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json"; import Featured from "../../components/Featured.astro";
+// Sources checked 2026-10-17: vendor pricing pages (CoinGecko, CoinMarketCap) and the CCXT repo all return 200.
+const picks = [
+  { slug: "coingecko-api", src: "https://www.coingecko.com/en/api/pricing", label: "Pricing", note: "Prices, market caps, exchanges and on-chain DEX data; free Demo plan to start." },
+  { slug: "coinmarketcap-api", src: "https://coinmarketcap.com/api/pricing/", label: "Pricing", note: "Listings, quotes and historical data; free Basic plan, paid plans priced in call credits." },
+  { slug: "ccxt", src: "https://github.com/ccxt/ccxt", label: "Repo", note: "Not a data vendor: one library for 100+ exchange APIs (market data and trading), MIT licensed." },
+].map(p => ({ ...p, t: tools.find(t => t.slug === p.slug) })).filter(p => p.t);
+---
+<Base title="Best crypto market data APIs — BuilderStack" description={`Crypto price and market data APIs compared by free tier and pricing: ${picks.map(p => p.t.name).join(", ")}.`}>
+<h1>Best crypto market data APIs</h1>
+<p>{picks.length} picks for pulling crypto prices, market caps and exchange data into an app or bot. Order is editorial, not paid. Free tiers change, so verify on the vendor site.</p>
+<Featured guide="crypto-market-data-apis"/>
+<table style="width:100%;border-collapse:collapse;font-size:.95rem">
+<thead><tr>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Tool</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Why</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Free tier</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Pricing</th>
+</tr></thead>
+<tbody>
+{picks.map(p => (
+<tr>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top"><a href={`${import.meta.env.BASE_URL}tools/${p.t.slug}/`}><b>{p.t.name}</b></a></td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.note} <small><a href={p.src} rel="nofollow">{p.label}</a></small></td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.t.freeTier}</td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.t.pricing}</td>
+</tr>
+))}
+</tbody>
+</table>
+<p><a href={`${import.meta.env.BASE_URL}best/`}>All use-case guides</a> · <a href={`${import.meta.env.BASE_URL}category/trading-market-data/`}>← Trading &amp; Market Data</a></p>
+</Base>
