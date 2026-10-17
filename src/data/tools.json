@@ -578,5 +578,55 @@
     "desc": "First-party oracle price feeds with OEV recapture.",
     "freeTier": "See site",
     "limits": "See site"
+  },
+  {
+    "slug": "coingecko-api",
+    "name": "CoinGecko API",
+    "url": "https://www.coingecko.com/en/api",
+    "category": "Trading & Market Data",
+    "pricing": "Free Demo + paid from $29/mo (yearly)",
+    "desc": "Crypto prices, market caps, exchange and on-chain DEX data over a REST API.",
+    "freeTier": "Free Demo plan (attribution required) + keyless public API",
+    "limits": "Call limits by plan; see pricing page"
+  },
+  {
+    "slug": "coinmarketcap-api",
+    "name": "CoinMarketCap API",
+    "url": "https://coinmarketcap.com/api/",
+    "category": "Trading & Market Data",
+    "pricing": "Free Basic + paid from $29/mo (yearly)",
+    "desc": "Market data API for crypto prices, listings, exchanges and historical quotes.",
+    "freeTier": "Free Basic plan + keyless public API",
+    "limits": "Paid plans from 150K call credits/mo; see pricing page"
+  },
+  {
+    "slug": "ccxt",
+    "name": "CCXT",
+    "url": "https://github.com/ccxt/ccxt",
+    "category": "Trading & Market Data",
+    "pricing": "Open source (MIT)",
+    "desc": "Unified trading API library for 100+ crypto exchanges in JS/TS, Python, C#, PHP and Go.",
+    "freeTier": "Free, open source",
+    "limits": "Subject to each exchange's API rate limits"
+  },
+  {
+    "slug": "btcpay-server",
+    "name": "BTCPay Server",
+    "url": "https://btcpayserver.org",
+    "category": "Payments",
+    "pricing": "Free, open source (self-hosted)",
+    "desc": "Self-hosted, open-source crypto payment processor with no processing fees.",
+    "freeTier": "Free; you pay only your own hosting",
+    "limits": "Self-hosted; no platform limits"
+  },
+  {
+    "slug": "nowpayments",
+    "name": "NOWPayments",
+    "url": "https://nowpayments.io",
+    "category": "Payments",
+    "pricing": "1% service fee",
+    "desc": "Crypto payment gateway API, invoices and payment widgets for 350+ currencies.",
+    "freeTier": "No monthly fee; per-transaction service fee",
+    "limits": "See pricing page for network and exchange fees"
   }
 ]
