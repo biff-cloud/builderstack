@@ -1,0 +1,33 @@
+---
+import Base from "../../layouts/Base.astro";
+// Sample DX teardown. Every claim checked on the linked public page on 2026-10-17. Unpaid; not commissioned by Ponder.
+const peers = [
+  ["Ponder", "pnpm create ponder", "Node.js 22.12+; PGlite by default, Postgres for production", "None; self-host or the Railway guide", "https://ponder.sh/docs/get-started"],
+  ["Envio HyperIndex", "pnpx envio init", "Node.js 22+ recommended; Docker to run locally", "Envio Cloud development plan, free; deleted after 30 days or past 20GB", "https://envio.dev/pricing"],
+  ["The Graph", "graph init", "Node.js, a crypto wallet, Subgraph Studio account", "Subgraph Studio for testing; pay per query on the network", "https://thegraph.com/docs/en/subgraphs/quick-start/"],
+  ["Goldsky", "Sign up", "Account", "$100 in free credits on the Starter plan", "https://goldsky.com/pricing"],
+];
+const fixes = [
+  ["Low", "Make Requirements agree with Database.", "The Requirements page lists PostgreSQL 14 to 17 as a system requirement, while the Database page says PGlite is the default and Postgres is only required for production. Mark Postgres as production-only so newcomers don't install a server they don't need.", "https://ponder.sh/docs/requirements"],
+  ["Low", "Re-capture the quickstart logs with PGlite.", "The sample log on Get started shows type=postgres at localhost:5432, which contradicts the PGlite default a fresh project uses.", "https://ponder.sh/docs/get-started"],
+  ["Low", "Say where the RPC URL comes from.", "The quickstart log connects to an Alchemy hostname, but the page never mentions an RPC URL or .env.local. PONDER_RPC_URL_1 first appears in the Railway guide. One sentence in step 2 removes the guesswork.", "https://ponder.sh/docs/production/railway"],
+  ["Low", "Link deployment from the quickstart's Next steps.", "Next steps points to examples, GitHub dependents and guides, but not to Production. Envio and The Graph both walk a new user to a hosted deploy in their quickstarts.", "https://ponder.sh/docs/get-started"],
+  ["Low", "Update the footer year.", "The homepage footer reads 2025 next to a benchmark dated 2026-09-08. Small, but it reads as unmaintained to a first-time visitor.", "https://ponder.sh/"],
+  ["Low", "State the benchmark hardware on the homepage.", "The chart gives versions, block range and event count, and links a reproducible run. Adding machine specs and RPC setup next to the 102.5x number makes it easier to trust and cite.", "https://ponder.sh/"],
+  ["Medium", "Publish a cost-to-run page.", "Ponder is free, but users pay for a Node host, Postgres and RPC. Peers show a price up front (Envio's free dev plan, Goldsky's $100 credit). A worked monthly example for a small app on Railway answers the first question a team lead asks.", "https://envio.dev/pricing"],
+  ["Medium", "Add a migrate-from-a-subgraph guide.", "The homepage's headline claim is speed against The Graph, but the docs sidebar has no guide for moving an existing subgraph. Envio markets AI-managed subgraph migration on its pricing page.", "https://envio.dev/pricing"],
+  ["Medium", "Add comparison pages.", "Envio's main nav has a Compare link. Ponder vs Envio and Ponder vs Goldsky pages would capture searches that land on competitors today.", "https://envio.dev/pricing"],
+  ["High", "Offer a managed path, even a partner one.", "Every peer here has a free hosted tier. Ponder's answer is self-hosting. A one-click template with a named partner, or an official hosted tier, would close the gap for teams that won't run Postgres.", "https://ponder.sh/docs/production/self-hosting"],
+];
+---
+<Base title="Sample DX teardown: Ponder — BuilderStack" description="Sample developer-experience teardown of Ponder (EVM indexer): quickstart, docs, pricing and free tier compared with Envio, The Graph and Goldsky, with 10 fixes ranked by effort.">
+<h1>Sample teardown: Ponder</h1>
+<p>This is an unpaid sample of our $149 developer-experience teardown, written to show the format. Ponder did not commission or review it. Every claim links to the public page we checked on 17 Oct 2026. <a href={`${import.meta.env.BASE_URL}sponsor/`}>Order one for your tool</a>.</p>
+<h2>Verdict</h2>
+<p>Ponder's quickstart is strong: one command, hot reload, and a type error the moment the schema and handlers disagree. The gaps are around it. Two docs pages disagree about the database, the RPC setup is never explained, and there is no hosted option or cost estimate while every peer leads with one.</p>
+<h2>Compared with 3 peers</h2>
+<table><tr><th>Tool</th><th>First command</th><th>Local prerequisites</th><th>Free managed option</th></tr>
+{peers.map(p => <tr><td><a href={p[4]} rel="nofollow">{p[0]}</a></td><td><code>{p[1]}</code></td><td>{p[2]}</td><td>{p[3]}</td></tr>)}</table>
+<h2>10 fixes, ranked by effort</h2>
+<ol>{fixes.map(f => <li><b>{f[1]}</b> ({f[0]} effort) {f[2]} <a href={f[3]} rel="nofollow">Source</a></li>)}</ol>
+</Base>
