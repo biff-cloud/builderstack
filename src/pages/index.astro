@@ -1,11 +1,12 @@
 ---
-import Base from "../layouts/Base.astro"; import tools from "../data/tools.json"; import Featured from "../components/Featured.astro";
+import Base from "../layouts/Base.astro"; import tools from "../data/tools.json"; import Featured from "../components/Featured.astro"; import { activeFeatured } from "../lib/featured.js";
+const hasFeatured=activeFeatured().length>0;
 const cats=[...new Set(tools.map(t=>t.category))];
 const slug=(c)=>c.toLowerCase().replace(/[^a-z0-9]+/g,"-");
 ---
 <Base description="BuilderStack: the curated, vendor-neutral directory of crypto developer infrastructure — RPC & nodes, indexing, security, wallets, oracles, SDKs and dev frameworks."><h1>BuilderStack</h1><p>The curated, vendor-neutral directory of developer infrastructure for crypto builders: RPCs, indexers, security, wallets, oracles.</p>
 <Featured/>
-<div class="card sp"><b>Sponsored slot</b> — <a href={`${import.meta.env.BASE_URL}sponsor/`}>your tool here</a></div>
+{!hasFeatured && <div class="card sp"><b>Sponsored slot</b> — <a href={`${import.meta.env.BASE_URL}sponsor/`}>your tool here</a></div>}
 <h2>Categories</h2><ul>{cats.map(c=><li><a href={`${import.meta.env.BASE_URL}category/${slug(c)}/`}>{c}</a> ({tools.filter(t=>t.category===c).length})</li>)}</ul>
 <p><a href={`${import.meta.env.BASE_URL}compare/rpc-providers/`}>RPC providers compared →</a> · <a href={`${import.meta.env.BASE_URL}best/rpc-for-solana/`}>Best RPC for Solana →</a> · <a href={`${import.meta.env.BASE_URL}best/rpc-for-evm/`}>Best RPC for EVM →</a> · <a href={`${import.meta.env.BASE_URL}best/indexer-for-evm/`}>Best EVM indexers →</a> · <a href={`${import.meta.env.BASE_URL}best/crypto-market-data-apis/`}>Best market data APIs →</a></p>
 <p><a href={`${import.meta.env.BASE_URL}newsletter/`}>Get the weekly builder-tools newsletter →</a></p></Base>

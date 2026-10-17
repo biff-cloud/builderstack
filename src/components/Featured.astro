@@ -1,11 +1,8 @@
 ---
-// Paid Featured slots. Entries in src/data/featured.json: {"slug","start":"YYYY-MM-DD","end":"YYYY-MM-DD","guide"?:"rpc-for-evm"}.
-// Shown only while start <= build date < end. Renders nothing when no entry is active.
-// Home: all active. Category page: active in that category. Guide page (guide prop): active entries whose "guide" matches.
-import tools from "../data/tools.json"; import featured from "../data/featured.json";
-const GUIDES=["rpc-for-evm","rpc-for-solana","indexer-for-evm","crypto-market-data-apis"];
+// Paid Featured slots (see src/lib/featured.js). Renders nothing when no entry is active.
+// Home: all active. Category page (category prop): active in that category. Guide page (guide prop): active entries whose "guide" matches.
+import { activeFeatured } from "../lib/featured.js";
 const {category,guide}=Astro.props;
-const today=new Date().toISOString().slice(0,10);
-const active=featured.filter(f=>f.start<=today&&today<f.end).map(f=>{const t=tools.find(x=>x.slug===f.slug);if(!t)throw new Error(`featured.json: unknown slug "${f.slug}"`);if(f.guide&&!GUIDES.includes(f.guide))throw new Error(`featured.json: unknown guide "${f.guide}"`);return {...t,guide:f.guide};}).filter(t=>guide?t.guide===guide:(!category||t.category===category));
+const active=activeFeatured({category,guide});
 ---
-{active.length>0 && <section class="featured"><h2>Featured <small>(paid placement)</small></h2>{active.map(t=><div class="card sp"><b>Featured</b> · <a href={`${import.meta.env.BASE_URL}tools/${t.slug}/`}><b>{t.name}</b></a> — {t.desc} <small>({t.pricing})</small>{t.verified && <small> · Verified {t.verified}</small>}</div>)}</section>}
+{active.length>0 && <section class="featured" aria-label="Featured (paid placement)">{active.map(t=><div class="card sp featured-card"><span class="featured-label">Featured · paid placement</span><p><a href={`${import.meta.env.BASE_URL}tools/${t.slug}/`}><b>{t.name}</b></a>{t.verified && <>{" "}<span class="badge-verified" title="We signed up and ran the quickstart on this date">✓ Verified {t.verified}</span></>}</p><p>{t.desc}{" "}<small>({t.pricing})</small></p></div>)}</section>}
