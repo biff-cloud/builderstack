@@ -1,0 +1,9 @@
+---
+// Paid Featured slots. Entries in src/data/featured.json: {"slug","start":"YYYY-MM-DD","end":"YYYY-MM-DD"}.
+// Shown only while start <= build date < end. Renders nothing when no entry is active.
+import tools from "../data/tools.json"; import featured from "../data/featured.json";
+const {category}=Astro.props;
+const today=new Date().toISOString().slice(0,10);
+const active=featured.filter(f=>f.start<=today&&today<f.end).map(f=>{const t=tools.find(x=>x.slug===f.slug);if(!t)throw new Error(`featured.json: unknown slug "${f.slug}"`);return t;}).filter(t=>!category||t.category===category);
+---
+{active.length>0 && <section class="featured"><h2>Featured <small>(paid placement)</small></h2>{active.map(t=><div class="card sp"><b>Featured</b> · <a href={`${import.meta.env.BASE_URL}tools/${t.slug}/`}><b>{t.name}</b></a> — {t.desc} <small>({t.pricing})</small></div>)}</section>}
