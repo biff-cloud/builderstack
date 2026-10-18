@@ -628,5 +628,35 @@
     "desc": "Crypto payment gateway API, invoices and payment widgets for 350+ currencies.",
     "freeTier": "No monthly fee; per-transaction service fee",
     "limits": "See pricing page for network and exchange fees"
+  },
+  {
+    "slug": "solana-pay",
+    "name": "Solana Pay",
+    "url": "https://solanapay.com",
+    "category": "Payments",
+    "pricing": "Free, open source (Apache-2.0)",
+    "desc": "Open payments framework and JS SDK for accepting SOL and SPL-token (e.g. USDC) payments via QR codes and transaction requests.",
+    "freeTier": "Free to use; payers pay Solana network fees",
+    "limits": "Solana only; you build checkout or run the open-source POS app"
+  },
+  {
+    "slug": "request-network",
+    "name": "Request Network",
+    "url": "https://request.network",
+    "category": "Payments",
+    "pricing": "Protocol/API fees (see docs)",
+    "desc": "Invoicing and payment-request protocol with an API for crypto payments, payouts, payment pages and webhooks across multiple chains.",
+    "freeTier": "Open-source protocol; API usage per docs",
+    "limits": "8 supported networks per docs; see supported currencies list"
+  },
+  {
+    "slug": "coinpayments",
+    "name": "CoinPayments",
+    "url": "https://www.coinpayments.net",
+    "category": "Payments",
+    "pricing": "Per-transaction processing fee (see fees page)",
+    "desc": "Hosted crypto payment gateway with merchant API, invoices, plugins and batched withdrawals for many coins and tokens.",
+    "freeTier": "No monthly fee listed; per-transaction fees",
+    "limits": "Volume discounts via sales; see supported coins and fees"
   }
 ]
