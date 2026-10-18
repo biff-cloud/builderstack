@@ -1,0 +1,37 @@
+---
+import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json"; import Featured from "../../components/Featured.astro";
+// Sources checked 2026-10-18: all source URLs return 200; GitHub repos not archived.
+const picks = [
+  { slug: "slither", src: "https://github.com/crytic/slither", label: "Repo", note: "Static analysis: fast Solidity detectors to run on every commit or in CI." },
+  { slug: "aderyn", src: "https://github.com/Cyfrin/aderyn", label: "Repo", note: "Static analysis in Rust with editor integration; a second opinion next to Slither." },
+  { slug: "echidna", src: "https://github.com/crytic/echidna", label: "Repo", note: "Fuzzing: write invariants and let it hunt for inputs that break them." },
+  { slug: "mythril", src: "https://github.com/ConsenSysDiligence/mythril", label: "Repo", note: "Symbolic execution on EVM bytecode; slower, finds deeper paths. Releases are less frequent than the tools above." },
+  { slug: "certora", src: "https://github.com/Certora/CertoraProver", label: "Repo", note: "Formal verification: prove rules hold for all inputs. Prover is open source; audits are paid." },
+  { slug: "openzeppelin", src: "https://www.openzeppelin.com/contracts", label: "Contracts", note: "Audited contract libraries, so you write less security-critical code yourself." },
+  { slug: "forta", src: "https://forta.org", label: "Site", note: "After deploy: real-time threat detection on live contracts." },
+].map(p => ({ ...p, t: tools.find(t => t.slug === p.slug) })).filter(p => p.t);
+---
+<Base title="Best smart contract security tools — BuilderStack" description={`Smart contract security tools by job (static analysis, fuzzing, formal verification, monitoring): ${picks.map(p => p.t.name).join(", ")}.`}>
+<h1>Best smart contract security tools</h1>
+<p>{picks.length} picks, ordered roughly as you would add them to a Solidity project: static analysis, fuzzing, symbolic execution, formal verification, safe libraries, then monitoring after deploy. Tools find bugs; they do not replace an audit. Order is editorial, not paid.</p>
+<Featured guide="smart-contract-security-tools"/>
+<table style="width:100%;border-collapse:collapse;font-size:.95rem">
+<thead><tr>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Tool</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Why</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Free tier</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Pricing</th>
+</tr></thead>
+<tbody>
+{picks.map(p => (
+<tr>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top"><a href={`${import.meta.env.BASE_URL}tools/${p.t.slug}/`}><b>{p.t.name}</b></a></td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.note} <small><a href={p.src} rel="nofollow">{p.label}</a></small></td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.t.freeTier}</td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.t.pricing}</td>
+</tr>
+))}
+</tbody>
+</table>
+<p><a href={`${import.meta.env.BASE_URL}best/`}>All use-case guides</a> · <a href={`${import.meta.env.BASE_URL}category/security/`}>← Security</a></p>
+</Base>
