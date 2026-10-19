@@ -325,7 +325,7 @@
     "url": "https://web3auth.io",
     "category": "Wallets & Custody",
     "pricing": "Free + paid",
-    "desc": "Social and MPC wallet infrastructure for dapps.",
+    "desc": "Social and MPC wallet infrastructure for dapps. Acquired by Consensys, per web3auth.io.",
     "freeTier": "Free starter tier",
     "limits": "MAU / key caps by plan; see site"
   },
@@ -415,7 +415,7 @@
     "url": "https://eth-brownie.readthedocs.io",
     "category": "Dev Frameworks",
     "pricing": "Open source",
-    "desc": "Python-based development and testing framework for EVM.",
+    "desc": "Python-based development and testing framework for EVM. No longer actively maintained per its docs; the docs point to Ape Framework.",
     "freeTier": "Fully free (OSS)",
     "limits": "None (self-hosted)"
   },
@@ -435,7 +435,7 @@
     "url": "https://web3js.org",
     "category": "Frontend SDKs",
     "pricing": "Open source",
-    "desc": "Ethereum JavaScript API library maintained by ChainSafe.",
+    "desc": "Ethereum JavaScript API library from ChainSafe. Sunset on 4 Mar 2025 per web3js.org; new projects should use ethers.js or viem.",
     "freeTier": "Fully free (OSS)",
     "limits": "None (self-hosted)"
   },
