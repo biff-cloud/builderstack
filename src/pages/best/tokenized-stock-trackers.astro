@@ -1,0 +1,34 @@
+---
+import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json"; import Featured from "../../components/Featured.astro";
+// Sources checked 2026-10-19 08:20 (UTC+3): all source URLs 200. Listing is editorial and unpaid.
+const picks = [
+  { slug: "asortino", src: "https://asortino.com/about", label: "About", note: "Built only for tokenized stocks and ETFs: one ticker across every issuer and chain, fundamentals (P/E, beta, dividends) and the verified contract to check on an explorer. Free beta, no API yet." },
+  { slug: "rwa-xyz", src: "https://app.rwa.xyz/stocks", label: "Tokenized stocks", note: "Market-level view: distributed value, monthly transfer volume and issuers for tokenized equities, next to treasuries and other RWAs. Free Preview; Pro and API are paid." },
+  { slug: "coingecko-api", src: "https://www.coingecko.com/en/categories/tokenized-stock", label: "Tokenized Stocks category", note: "Free price, market cap and 24h volume list for tokenized stock tokens on the CoinGecko site; same data through the CoinGecko API if you are building." },
+  { slug: "defillama", src: "https://defillama.com/rwa", label: "RWA dashboard", note: "Free RWA dashboard across chains for the wider tokenized-asset market; API from $250/mo if you need premium endpoints." },
+].map(p => ({ ...p, t: tools.find(t => t.slug === p.slug) })).filter(p => p.t);
+---
+<Base title="Best tokenized stock and ETF trackers — BuilderStack" description={`Track tokenized stocks and ETFs across issuers and chains, and confirm the real contract address: ${picks.map(p => p.t.name).join(", ")}.`}>
+<h1>Best tokenized stock and ETF trackers</h1>
+<p>{picks.length} picks: a dedicated tokenized-stock screener first, then wider RWA and price trackers. Data only, not investment advice; many issuers geo-restrict tokenized stocks (for example, xStocks are not offered to U.S. persons). Order is editorial, not paid.</p>
+<Featured guide="tokenized-stock-trackers"/>
+<table style="width:100%;border-collapse:collapse;font-size:.95rem">
+<thead><tr>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Tool</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Why</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Free tier</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Pricing</th>
+</tr></thead>
+<tbody>
+{picks.map(p => (
+<tr>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top"><a href={`${import.meta.env.BASE_URL}tools/${p.t.slug}/`}><b>{p.t.name}</b></a></td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.note} <small><a href={p.src} rel="nofollow">{p.label}</a></small></td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.t.freeTier}</td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.t.pricing}</td>
+</tr>
+))}
+</tbody>
+</table>
+<p><a href={`${import.meta.env.BASE_URL}best/`}>All use-case guides</a> · <a href={`${import.meta.env.BASE_URL}category/trading-market-data/`}>← Trading &amp; Market Data</a></p>
+</Base>

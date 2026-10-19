@@ -698,5 +698,25 @@
     "desc": "Real-time wallet screening for AML/CFT and sanctions compliance with 150+ risk configurations.",
     "freeTier": "None listed; sanctions API docs public",
     "limits": "Enterprise pricing; see site"
+  },
+  {
+    "slug": "asortino",
+    "name": "Asortino",
+    "url": "https://asortino.com",
+    "category": "Trading & Market Data",
+    "pricing": "Free (beta)",
+    "desc": "Screener for tokenized stocks and ETFs: one asset across every issuer and chain, with P/E, beta, dividends and verified token contract addresses.",
+    "freeTier": "Free site, no account needed to browse",
+    "limits": "Beta; no public API or pricing page as of Oct 2026"
+  },
+  {
+    "slug": "rwa-xyz",
+    "name": "RWA.xyz",
+    "url": "https://app.rwa.xyz",
+    "category": "Trading & Market Data",
+    "pricing": "Free Preview + Pro $500/mo + Enterprise API",
+    "desc": "Registry and analytics for tokenized real-world assets, including tokenized stocks and ETFs, treasuries, credit and commodities.",
+    "freeTier": "Free Preview: reference data and market metrics",
+    "limits": "Pro $500/mo (3 seats, +$100/seat); Enterprise API custom"
   }
 ]
