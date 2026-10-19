@@ -1,0 +1,35 @@
+---
+import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json"; import Featured from "../../components/Featured.astro";
+// Sources checked 2026-10-19 18:35 (UTC+3): all source URLs 200. Listing is editorial and unpaid.
+const picks = [
+  { slug: "mercu", src: "https://mercu.win", label: "Home", note: "Futures market monitor with alerts on price, open interest and fund-flow anomalies, plus aggregated news pushed to your phone. States it holds no funds, needs no keys and has no token. Web dashboard; VIP free 3-day trial." },
+  { slug: "coinglass", src: "https://www.coinglass.com/pricing", label: "API pricing", note: "Widely used OI, funding-rate and liquidation dashboards on the free web site, plus a derivatives data API (Hobbyist from $29/mo up to Professional $699/mo; Enterprise on request)." },
+  { slug: "laevitas", src: "https://www.laevitas.ch/", label: "Home / Plans", note: "Options and futures analytics across 15+ exchanges: funding, OI, liquidations, Greeks and order books. Free $0/mo (1 week history, basic charting); Premium $50/mo per seat; Enterprise $500/mo per seat." },
+  { slug: "velo", src: "https://docs.velo.xyz/api", label: "API docs", note: "Web app for charts, OI, funding, orderbook/liquidation heatmaps and alerts, plus an API. API keys from $199/mo (monthly = 3-month history, yearly = full history); trial on request." },
+  { slug: "hyblock-capital", src: "https://hyblockcapital.com/pricing", label: "Pricing", note: "Liquidation levels/heatmaps, OI, screeners and a backtesting lab. Basic $0/mo (Tier 1 indicators); Advanced $99/mo; Professional $499/mo with API and Tier 3 metrics." },
+].map(p => ({ ...p, t: tools.find(t => t.slug === p.slug) })).filter(p => p.t);
+---
+<Base title="Best crypto futures market monitors — BuilderStack" description={`Compare crypto futures and derivatives market monitors for OI, funding and liquidations: ${picks.map(p => p.t.name).join(", ")}.`}>
+<h1>Best crypto futures market monitors</h1>
+<p>{picks.length} picks: phone-alert futures monitors and web/API derivatives dashboards for open interest, funding rates and liquidations. Data only, not investment advice. Order is editorial, not paid.</p>
+<Featured guide="crypto-futures-market-monitors"/>
+<table style="width:100%;border-collapse:collapse;font-size:.95rem">
+<thead><tr>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Tool</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Why</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Free tier</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Pricing</th>
+</tr></thead>
+<tbody>
+{picks.map(p => (
+<tr>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top"><a href={`${import.meta.env.BASE_URL}tools/${p.t.slug}/`}><b>{p.t.name}</b></a></td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.note} <small><a href={p.src} rel="nofollow">{p.label}</a></small></td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.t.freeTier}</td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.t.pricing}</td>
+</tr>
+))}
+</tbody>
+</table>
+<p><a href={`${import.meta.env.BASE_URL}best/`}>All use-case guides</a> · <a href={`${import.meta.env.BASE_URL}category/trading-market-data/`}>← Trading &amp; Market Data</a></p>
+</Base>

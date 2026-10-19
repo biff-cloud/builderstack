@@ -728,5 +728,45 @@
     "desc": "Registry and analytics for tokenized real-world assets, including tokenized stocks and ETFs, treasuries, credit and commodities.",
     "freeTier": "Free Preview: reference data and market metrics",
     "limits": "Pro $500/mo (3 seats, +$100/seat); Enterprise API custom"
+  },
+  {
+    "slug": "coinglass",
+    "name": "CoinGlass",
+    "url": "https://www.coinglass.com",
+    "category": "Trading & Market Data",
+    "pricing": "Free web + API from $29/mo",
+    "desc": "Crypto derivatives market data: open interest, funding rates, liquidations, options and more across major exchanges, on the web and via API.",
+    "freeTier": "Free web dashboards for OI, funding, liquidations and related charts",
+    "limits": "API: Hobbyist $29/mo, Startup $79/mo, Standard $299/mo, Professional $699/mo; Enterprise inquire"
+  },
+  {
+    "slug": "laevitas",
+    "name": "Laevitas",
+    "url": "https://www.laevitas.ch",
+    "category": "Trading & Market Data",
+    "pricing": "Free + Premium $50/mo per seat + Enterprise $500/mo per seat",
+    "desc": "Crypto derivatives analytics across options, perpetual and dated futures: funding rates, open interest, liquidations, Greeks and order books on 15+ exchanges.",
+    "freeTier": "Free $0/mo: 1 week historical data, basic charting (8 charts per page)",
+    "limits": "Premium $50/mo per seat; Enterprise $500/mo per seat; Custom Enterprise; USDC on Base or Solana"
+  },
+  {
+    "slug": "velo",
+    "name": "Velo",
+    "url": "https://velo.xyz",
+    "category": "Trading & Market Data",
+    "pricing": "Web app + API from $199/mo",
+    "desc": "Crypto market insights web app and API: charts, open interest, funding rates, orderbook and liquidation heatmaps, alerts and news across major exchanges.",
+    "freeTier": "Web app (charts, OI, funding, heatmaps, alerts per docs); API trial on request via support@velo.xyz",
+    "limits": "API keys $199/mo; monthly (3-month history) or yearly (full history)"
+  },
+  {
+    "slug": "hyblock-capital",
+    "name": "Hyblock Capital",
+    "url": "https://hyblockcapital.com",
+    "category": "Trading & Market Data",
+    "pricing": "Basic free + Advanced $99/mo + Professional $499/mo",
+    "desc": "Crypto derivatives analytics: liquidation levels and heatmaps, open interest, customizable dashboards, screeners and a backtesting lab.",
+    "freeTier": "Basic $0/mo: Tier 1 indicators, chart, data explorer, up to 1 saved alert",
+    "limits": "Advanced $99/mo; Professional $499/mo (API + Tier 3); annual billing discounts on paid plans"
   }
 ]
