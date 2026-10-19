@@ -3,6 +3,7 @@ import Base from "../../layouts/Base.astro"; import tools from "../../data/tools
 export function getStaticPaths(){return tools.map(t=>({params:{slug:t.slug},props:{t}}));}
 const {t}=Astro.props;
 if(t.verified&&!/^\d{4}-\d{2}-\d{2}$/.test(t.verified))throw new Error(`tools.json: ${t.slug} verified must be YYYY-MM-DD`);
+const alts=(t.alternatives||[]).map(s=>tools.find(x=>x.slug===s)||(()=>{throw new Error(`tools.json: ${t.slug} alternative ${s} unknown`)})());
 ---
 <Base title={`${t.name} — BuilderStack`} description={`${t.name}: ${t.desc} Category: ${t.category}. Pricing: ${t.pricing}.`}>
 <h1>{t.name}</h1>
@@ -11,5 +12,6 @@ if(t.verified&&!/^\d{4}-\d{2}-\d{2}$/.test(t.verified))throw new Error(`tools.js
 <p>Category: {t.category} · Pricing: {t.pricing}</p>
 {t.freeTier && <p><b>Free tier:</b> {t.freeTier}</p>}
 {t.limits && <p><b>Limits:</b> {t.limits}</p>}
+{alts.length>0 && <p><b>Alternatives:</b> {alts.map((a,i)=><>{i>0&&", "}<a href={`${import.meta.env.BASE_URL}tools/${a.slug}/`}>{a.name}</a></>)}</p>}
 <p><a href={t.url} rel="noopener">Visit {t.name} →</a></p>
 </Base>

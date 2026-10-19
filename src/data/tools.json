@@ -417,7 +417,10 @@
     "pricing": "Open source",
     "desc": "Python-based development and testing framework for EVM. No longer actively maintained per its docs; the docs point to Ape Framework.",
     "freeTier": "Fully free (OSS)",
-    "limits": "None (self-hosted)"
+    "limits": "None (self-hosted)",
+    "alternatives": [
+      "ape"
+    ]
   },
   {
     "slug": "ape",
@@ -437,7 +440,11 @@
     "pricing": "Open source",
     "desc": "Ethereum JavaScript API library from ChainSafe. Sunset on 4 Mar 2025 per web3js.org; new projects should use ethers.js or viem.",
     "freeTier": "Fully free (OSS)",
-    "limits": "None (self-hosted)"
+    "limits": "None (self-hosted)",
+    "alternatives": [
+      "ethers-js",
+      "viem"
+    ]
   },
   {
     "slug": "solana-web3-js",
