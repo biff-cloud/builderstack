@@ -710,6 +710,16 @@
     "limits": "Beta; no public API or pricing page as of Oct 2026"
   },
   {
+    "slug": "mercu",
+    "name": "Mercu",
+    "url": "https://mercu.win",
+    "category": "Trading & Market Data",
+    "pricing": "Free trial + paid",
+    "desc": "Crypto futures market monitor: alerts on price, open interest and fund-flow anomalies, plus aggregated news, pushed to your phone. Holds no funds, needs no keys, has no token.",
+    "freeTier": "Web dashboard; VIP free 3-day trial, no payment",
+    "limits": "VIP from 98 U per 3 months (U appears to be about $1; currency not named on the page); no public API"
+  },
+  {
     "slug": "rwa-xyz",
     "name": "RWA.xyz",
     "url": "https://app.rwa.xyz",
