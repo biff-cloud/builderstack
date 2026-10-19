@@ -1,0 +1,34 @@
+---
+import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json"; import Featured from "../../components/Featured.astro";
+// Sources checked 2026-10-19 04:20 (UTC+3): all source URLs 200. Listing is editorial and unpaid.
+const picks = [
+  { slug: "eagle-virtual", src: "https://eaglevirtual.com/pricing", label: "Pricing", note: "Focused USDT/USDC freeze and seize history for any wallet across 41 chains, free with no account; API and an MCP server for AI assistants." },
+  { slug: "freezeradar", src: "https://freezeradar.com/developers", label: "Developers", note: "Broader freezeable-asset risk (stablecoins, tokenized assets) plus sanctions exposure, with watchlists and counterparty alerts; cheapest paid tiers here." },
+  { slug: "chainalysis-sanctions-oracle", src: "https://go.chainalysis.com/chainalysis-oracle-docs.html", label: "Docs", note: "Free sanctions check your contract can call on-chain before accepting funds; covers sanctions lists only, not issuer freezes." },
+  { slug: "trm-wallet-screening", src: "https://docs.sanctions.trmlabs.com/", label: "Sanctions API docs", note: "Enterprise AML and sanctions screening for exchanges and payment firms that need configurable risk rules and audit trails." },
+].map(p => ({ ...p, t: tools.find(t => t.slug === p.slug) })).filter(p => p.t);
+---
+<Base title="Best wallet blacklist and sanctions screening tools — BuilderStack" description={`Check a crypto wallet for USDT/USDC blacklist freezes and sanctions exposure before you pay or accept funds: ${picks.map(p => p.t.name).join(", ")}.`}>
+<h1>Best wallet blacklist and sanctions screening tools</h1>
+<p>{picks.length} picks: consumer-friendly freeze checkers first, then on-chain and enterprise sanctions screening. Not legal or compliance advice. Order is editorial, not paid.</p>
+<Featured guide="wallet-screening"/>
+<table style="width:100%;border-collapse:collapse;font-size:.95rem">
+<thead><tr>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Tool</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Why</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Free tier</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Pricing</th>
+</tr></thead>
+<tbody>
+{picks.map(p => (
+<tr>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top"><a href={`${import.meta.env.BASE_URL}tools/${p.t.slug}/`}><b>{p.t.name}</b></a></td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.note} <small><a href={p.src} rel="nofollow">{p.label}</a></small></td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.t.freeTier}</td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.t.pricing}</td>
+</tr>
+))}
+</tbody>
+</table>
+<p><a href={`${import.meta.env.BASE_URL}best/`}>All use-case guides</a> · <a href={`${import.meta.env.BASE_URL}category/security/`}>← Security</a></p>
+</Base>

@@ -658,5 +658,45 @@
     "desc": "Hosted crypto payment gateway with merchant API, invoices, plugins and batched withdrawals for many coins and tokens.",
     "freeTier": "No monthly fee listed; per-transaction fees",
     "limits": "Volume discounts via sales; see supported coins and fees"
+  },
+  {
+    "slug": "eagle-virtual",
+    "name": "Eagle Virtual",
+    "url": "https://eaglevirtual.com",
+    "category": "Security",
+    "pricing": "Free + paid",
+    "desc": "USDT and USDC blacklist checker and freeze tracker: every freeze and seize for a wallet across 41 chains, with an API and MCP server.",
+    "freeTier": "Free wallet checks, no account; MCP server 100 calls/day without sign-in",
+    "limits": "Business plan $349.50/mo intro price until 15 Nov 2026; see pricing"
+  },
+  {
+    "slug": "freezeradar",
+    "name": "FreezeRadar",
+    "url": "https://freezeradar.com",
+    "category": "Security",
+    "pricing": "Free + paid",
+    "desc": "Wallet risk scans for freezeable assets (stablecoins, tokenized assets) and sanctions exposure, with watchlists and alerts.",
+    "freeTier": "5 wallet scans/day + 1 deep scan/week",
+    "limits": "Pro $4.90, Pro Plus $14.90, Business $49.90 per month (40/160/600 deep scans)"
+  },
+  {
+    "slug": "chainalysis-sanctions-oracle",
+    "name": "Chainalysis Sanctions Oracle",
+    "url": "https://go.chainalysis.com/chainalysis-oracle-docs.html",
+    "category": "Security",
+    "pricing": "Free",
+    "desc": "Smart contract that answers whether an address is on a sanctions list, callable on-chain from Ethereum, Base, Arbitrum, Optimism, Polygon, BNB Chain and more.",
+    "freeTier": "Free on-chain reads; free Sanctions API by request form",
+    "limits": "Sanctions lists only, not general risk scoring"
+  },
+  {
+    "slug": "trm-wallet-screening",
+    "name": "TRM Wallet Screening",
+    "url": "https://www.trmlabs.com/products/sanctions",
+    "category": "Security",
+    "pricing": "Contact sales",
+    "desc": "Real-time wallet screening for AML/CFT and sanctions compliance with 150+ risk configurations.",
+    "freeTier": "None listed; sanctions API docs public",
+    "limits": "Enterprise pricing; see site"
   }
 ]
