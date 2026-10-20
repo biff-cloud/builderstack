@@ -14,4 +14,5 @@ const alts=(t.alternatives||[]).map(s=>tools.find(x=>x.slug===s)||(()=>{throw ne
 {t.limits && <p><b>Limits:</b> {t.limits}</p>}
 {alts.length>0 && <p><b>Alternatives:</b> {alts.map((a,i)=><>{i>0&&", "}<a href={`${import.meta.env.BASE_URL}tools/${a.slug}/`}>{a.name}</a></>)}</p>}
 <p><a href={t.url} rel="noopener">Visit {t.name} →</a></p>
+<p class="vendor-cta"><small>Work on {t.name}? <a href={`${import.meta.env.BASE_URL}sponsor/`}>Get it featured or request a docs teardown</a>. Paid placements are always labeled; rankings don't change.</small></p>
 </Base>
