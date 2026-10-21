@@ -1,0 +1,35 @@
+---
+import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json"; import Featured from "../../components/Featured.astro";
+// Sources checked 2026-10-22: all source URLs return 200. Chain/provider counts are the vendors' own figures from those pages.
+const picks = [
+  { slug: "chainlink", src: "https://docs.chain.link/data-feeds", label: "Docs", note: "Push-based price, proof-of-reserve, NAV and rate feeds from decentralized oracle networks, published onchain on dozens of networks (EVM plus Solana, Aptos, Starknet, Stellar, Tron guides). Also VRF (verifiable randomness) and CCIP (cross-chain messaging). Used by lending markets, stablecoins and tokenized funds." },
+  { slug: "pyth", src: "https://docs.pyth.network/price-feeds", label: "Docs", note: "First-party data from 120+ providers (exchanges, trading firms, market makers). Pyth Core: 400ms updates, push and pull, 100+ chains. Pyth Pro: subscription, lower latency, API key. Fits perps and anything latency-sensitive." },
+  { slug: "redstone", src: "https://docs.redstone.finance/docs/introduction", label: "Docs", note: "Push feeds for lending and vaults, pull feeds for gas-efficient integrations; 110+ chains. Also Bolt (fast chains), Live (offchain streaming) and Proof of Reserve for tokenized assets." },
+  { slug: "api3", src: "https://api3.org", label: "Site", note: "First-party oracle feeds (100+ data feeds) that return OEV (oracle extractable value from liquidations) to the integrating protocol as rewards. Worth a look for lending protocols." },
+  { slug: "uma", src: "https://docs.uma.xyz", label: "Docs", note: "Optimistic oracle: anyone proposes an answer with a bond; it is accepted unless disputed in the challenge period, and disputes go to a UMA token vote. For arbitrary questions, not prices: prediction markets (Polymarket), insurance, bridges." },
+].map(p => ({ ...p, t: tools.find(t => t.slug === p.slug) })).filter(p => p.t);
+---
+<Base title="Best blockchain oracles — BuilderStack" description={`Blockchain oracles compared for price feeds and arbitrary data: ${picks.map(p => p.t.name).join(", ")}.`}>
+<h1>Best blockchain oracles</h1>
+<p>{picks.length} picks: four price-feed oracles (push vs pull, latency, OEV), then an optimistic oracle for arbitrary data. Order is editorial, not paid.</p>
+<Featured guide="oracles"/>
+<table style="width:100%;border-collapse:collapse;font-size:.95rem">
+<thead><tr>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Tool</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Why</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Free tier</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Pricing</th>
+</tr></thead>
+<tbody>
+{picks.map(p => (
+<tr>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top"><a href={`${import.meta.env.BASE_URL}tools/${p.t.slug}/`}><b>{p.t.name}</b></a></td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.note} <small><a href={p.src} rel="nofollow">{p.label}</a></small></td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.t.freeTier}</td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.t.pricing}</td>
+</tr>
+))}
+</tbody>
+</table>
+<p><a href={`${import.meta.env.BASE_URL}best/`}>All use-case guides</a> · <a href={`${import.meta.env.BASE_URL}category/oracles/`}>← Oracles</a></p>
+</Base>

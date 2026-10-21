@@ -587,6 +587,16 @@
     "limits": "See site"
   },
   {
+    "slug": "uma",
+    "name": "UMA",
+    "url": "https://uma.xyz",
+    "category": "Oracles",
+    "pricing": "Per-request reward + bond",
+    "desc": "Optimistic oracle for arbitrary verifiable data (prediction markets, insurance, bridges).",
+    "freeTier": "Open contracts; no signup",
+    "limits": "Answers final after challenge period; disputes go to UMA token vote"
+  },
+  {
     "slug": "coingecko-api",
     "name": "CoinGecko API",
     "url": "https://www.coingecko.com/en/api",
