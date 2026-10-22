@@ -1,0 +1,36 @@
+---
+import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json"; import Featured from "../../components/Featured.astro";
+// Sources checked 2026-10-22: all source URLs return 200; prices from each vendor's live pricing page.
+const picks = [
+  { slug: "privy", src: "https://www.privy.io/pricing", label: "Pricing", note: "Embedded wallets plus login (email, social, passkeys). Free up to 500 MAU; Core $299/mo to 2,500 MAU; Scale $499/mo to 10,000. Most generous fixed free tier here for a small app." },
+  { slug: "turnkey", src: "https://www.turnkey.com/pricing", label: "Pricing", note: "Key infrastructure in secure enclaves, priced per signature instead of per user: up to 1k wallets and 25 signatures/mo free, then $0.10/signature; Pro $99/mo at $0.05. Fits backends, agents and low-activity wallets." },
+  { slug: "web3auth", src: "https://web3auth.io/pricing.html", label: "Pricing", note: "Social-login MPC wallets. Free Base plan up to 1,000 monthly active wallets; Growth $69/mo, Scale $399/mo. Docs now live under MetaMask Embedded Wallets (web3auth.io/docs redirects there)." },
+  { slug: "reown", src: "https://reown.com/pricing", label: "Pricing", note: "AppKit (formerly WalletConnect): connect external wallets plus embedded wallets/SIWX. Starter $0 for 1 project and 500 MAU; Pro $890/yr after a 14-day trial. Pick it if most users already have a wallet." },
+  { slug: "dynamic", src: "https://www.dynamic.xyz/pricing", label: "Pricing", note: "Auth plus embedded and multi-wallet login. No free tier on the pricing page: Growth $249/mo up to 5,000 MAU, then $0.005 per MAU." },
+].map(p => ({ ...p, t: tools.find(t => t.slug === p.slug) })).filter(p => p.t);
+---
+<Base title="Best embedded wallet SDKs — BuilderStack" description={`Embedded wallet and wallet-login SDKs compared by free tier and price: ${picks.map(p => p.t.name).join(", ")}.`}>
+<h1>Best embedded wallet SDKs</h1>
+<p>{picks.length} picks for giving app users a wallet without a browser extension. Prices checked on each vendor's pricing page on 22 Oct 2026; MAU means monthly active users. Order is editorial, not paid.</p>
+<Featured guide="embedded-wallets"/>
+<table style="width:100%;border-collapse:collapse;font-size:.95rem">
+<thead><tr>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Tool</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Why</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Free tier</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Pricing</th>
+</tr></thead>
+<tbody>
+{picks.map(p => (
+<tr>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top"><a href={`${import.meta.env.BASE_URL}tools/${p.t.slug}/`}><b>{p.t.name}</b></a></td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.note} <small><a href={p.src} rel="nofollow">{p.label}</a></small></td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.t.freeTier}</td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.t.pricing}</td>
+</tr>
+))}
+</tbody>
+</table>
+<p>For team treasuries rather than end users, see <a href={`${import.meta.env.BASE_URL}tools/safe/`}>Safe</a> multisig. For gas sponsorship on smart accounts, see <a href={`${import.meta.env.BASE_URL}tools/pimlico/`}>Pimlico</a>.</p>
+<p><a href={`${import.meta.env.BASE_URL}best/`}>All use-case guides</a> · <a href={`${import.meta.env.BASE_URL}category/wallets-custody/`}>← Wallets & Custody</a></p>
+</Base>
