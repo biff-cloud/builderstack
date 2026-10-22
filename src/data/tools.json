@@ -260,6 +260,16 @@
     "limits": "Learning/debugging aid; no mainnet transaction tracing"
   },
   {
+    "slug": "dedaub",
+    "name": "Dedaub",
+    "url": "https://dedaub.com",
+    "category": "Debugging & Simulation",
+    "pricing": "Free + Team/Enterprise (contact sales)",
+    "desc": "EVM security suite with a bytecode decompiler, contract explorer, transaction debugger and simulator, plus on-chain monitoring for teams.",
+    "freeTier": "Free personal account: decompiler access (usage limits may apply) and public security alerts",
+    "limits": "Team and Enterprise plans are contact-sales (no public price); Team covers 5 users, 10 codebases, monitoring bots"
+  },
+  {
     "slug": "anchor",
     "name": "Anchor",
     "url": "https://www.anchor-lang.com",
