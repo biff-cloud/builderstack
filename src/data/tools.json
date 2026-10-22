@@ -240,6 +240,16 @@
     "limits": "Paid features; see site"
   },
   {
+    "slug": "sentio",
+    "name": "Sentio",
+    "url": "https://www.sentio.xyz",
+    "category": "Debugging & Simulation",
+    "pricing": "Free + paid",
+    "desc": "Transaction debugger and simulator, plus TypeScript indexer, analytics and alerts.",
+    "freeTier": "Free: 200M Sentio Units, 5 projects, 1 alert",
+    "limits": "Pay as you go from $0.03/1M SUs (first 3B), then $0.02/1M"
+  },
+  {
     "slug": "anchor",
     "name": "Anchor",
     "url": "https://www.anchor-lang.com",
