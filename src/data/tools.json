@@ -250,6 +250,16 @@
     "limits": "Pay as you go from $0.03/1M SUs (first 3B), then $0.02/1M"
   },
   {
+    "slug": "evm-codes",
+    "name": "evm.codes",
+    "url": "https://www.evm.codes",
+    "category": "Debugging & Simulation",
+    "pricing": "Free",
+    "desc": "Interactive EVM opcode reference with an in-browser playground to step through bytecode, Solidity or Yul.",
+    "freeTier": "Free, open source (MIT, maintained by Dune)",
+    "limits": "Learning/debugging aid; no mainnet transaction tracing"
+  },
+  {
     "slug": "anchor",
     "name": "Anchor",
     "url": "https://www.anchor-lang.com",
