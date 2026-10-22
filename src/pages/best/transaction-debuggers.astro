@@ -1,0 +1,35 @@
+---
+import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json"; import Featured from "../../components/Featured.astro";
+// Sources checked 2026-10-23: all source URLs return 200. Free tiers and pricing come from tools.json (each vendor's live pricing page).
+const picks = [
+  { slug: "tenderly", src: "https://docs.tenderly.co/debugger", label: "Docs", note: "The broadest kit: Debugger with execution overview, gas profiler and expression evaluation, plus Simulator UI and Simulation API, Virtual Environments (forked testnets), alerts and Web3 Actions. Default pick for EVM teams that want debugging and pre-flight simulation in one place." },
+  { slug: "sentio", src: "https://docs.sentio.xyz/docs/debugger", label: "Docs", note: "Debugger with function-only and single-step modes, fund tracing, simulation, forks and dynamic logging, plus Remix and VS Code plugins. Same account also runs TypeScript indexers, dashboards and alerts, so it fits teams that want debugging next to their analytics." },
+  { slug: "phalcon", src: "https://docs.blocksec.com/phalcon", label: "Docs", note: "BlockSec's Phalcon Explorer for reading what a transaction did (calls and fund flow), the usual tool when tracing an exploit. Phalcon Security adds paid hack monitoring and automated blocking for protocols." },
+  { slug: "dedaub", src: "https://dedaub.com/pricing", label: "Pricing", note: "Bytecode decompiler first: useful when the contract you are debugging is unverified. Also a contract explorer, transaction debugger and simulator; team monitoring is contact-sales." },
+  { slug: "evm-codes", src: "https://www.evm.codes/playground", label: "Playground", note: "Opcode reference with gas costs and an in-browser playground to step through bytecode, Solidity or Yul. Not a mainnet tracer; use it to understand what a trace from the tools above is showing you." },
+].map(p => ({ ...p, t: tools.find(t => t.slug === p.slug) })).filter(p => p.t);
+---
+<Base title="Best transaction debuggers and simulators — BuilderStack" description={`EVM transaction debuggers and simulators compared: ${picks.map(p => p.t.name).join(", ")}.`}>
+<h1>Best transaction debuggers and simulators</h1>
+<p>{picks.length} picks for EVM work: three full debuggers with simulation, a decompiler for unverified contracts, and an opcode reference. Order is editorial, not paid.</p>
+<Featured guide="transaction-debuggers"/>
+<table style="width:100%;border-collapse:collapse;font-size:.95rem">
+<thead><tr>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Tool</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Why</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Free tier</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Pricing</th>
+</tr></thead>
+<tbody>
+{picks.map(p => (
+<tr>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top"><a href={`${import.meta.env.BASE_URL}tools/${p.t.slug}/`}><b>{p.t.name}</b></a></td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.note} <small><a href={p.src} rel="nofollow">{p.label}</a></small></td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.t.freeTier}</td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.t.pricing}</td>
+</tr>
+))}
+</tbody>
+</table>
+<p><a href={`${import.meta.env.BASE_URL}best/`}>All use-case guides</a> · <a href={`${import.meta.env.BASE_URL}category/debugging-simulation/`}>← Debugging &amp; Simulation</a></p>
+</Base>
