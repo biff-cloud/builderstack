@@ -597,6 +597,16 @@
     "limits": "Needs your own archive node"
   },
   {
+    "slug": "solana-explorer",
+    "name": "Solana Explorer",
+    "url": "https://explorer.solana.com",
+    "category": "Explorers",
+    "pricing": "Free (open source, MIT)",
+    "desc": "Solana Foundation's official explorer for transactions, accounts, blocks and program instructions across mainnet, devnet and testnet.",
+    "freeTier": "Free web app; MIT source to self-host",
+    "limits": "Web UI only; use an RPC provider for programmatic reads"
+  },
+  {
     "slug": "mempool-space",
     "name": "mempool.space",
     "url": "https://mempool.space",
