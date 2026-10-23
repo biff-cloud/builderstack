@@ -597,6 +597,16 @@
     "limits": "Needs your own archive node"
   },
   {
+    "slug": "mempool-space",
+    "name": "mempool.space",
+    "url": "https://mempool.space",
+    "category": "Explorers",
+    "pricing": "Free + enterprise API",
+    "desc": "Open-source Bitcoin explorer: mempool, fee estimates, blocks, Lightning, plus a public REST/WebSocket API.",
+    "freeTier": "Free web + public REST API; AGPL-3.0, self-host",
+    "limits": "Public API is rate limited; see mempool.space/docs/api"
+  },
+  {
     "slug": "pimlico",
     "name": "Pimlico",
     "url": "https://www.pimlico.io",
