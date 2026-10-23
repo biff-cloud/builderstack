@@ -637,6 +637,16 @@
     "limits": "Answers final after challenge period; disputes go to UMA token vote"
   },
   {
+    "slug": "chronicle",
+    "name": "Chronicle",
+    "url": "https://docs.chroniclelabs.org",
+    "category": "Oracles",
+    "pricing": "No public price list; production access by request form",
+    "desc": "EVM oracle network (Scribe) for crypto, stablecoin, RWA and equity price feeds, plus Proof of Asset.",
+    "freeTier": "Testnets: whitelist yourself via the SelfKisser contract",
+    "limits": "Mainnet feeds are read-protected; your address must be whitelisted via form"
+  },
+  {
     "slug": "coingecko-api",
     "name": "CoinGecko API",
     "url": "https://www.coingecko.com/en/api",
