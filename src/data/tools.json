@@ -280,6 +280,16 @@
     "limits": "None (self-hosted)"
   },
   {
+    "slug": "solana-playground",
+    "name": "Solana Playground",
+    "url": "https://beta.solpg.io",
+    "category": "Dev Frameworks",
+    "pricing": "Open source",
+    "desc": "Browser IDE to write, build, deploy and test Solana programs, Anchor crates included; nothing to install.",
+    "freeTier": "Fully free (OSS, Apache-2.0)",
+    "limits": "None (runs in browser)"
+  },
+  {
     "slug": "ankr",
     "name": "Ankr",
     "url": "https://www.ankr.com",
