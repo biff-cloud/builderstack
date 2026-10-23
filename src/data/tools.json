@@ -727,6 +727,16 @@
     "limits": "Volume discounts via sales; see supported coins and fees"
   },
   {
+    "slug": "bitpay",
+    "name": "BitPay",
+    "url": "https://bitpay.com",
+    "category": "Payments",
+    "pricing": "2% + 25¢ per transaction under $500K/mo; 1.5% + 25¢ to $1M; 1% + 25¢ above (higher for high-risk industries)",
+    "desc": "Hosted crypto payment processor for merchants, with invoices, payment links and a REST API.",
+    "freeTier": "No monthly fee; per-transaction fees only",
+    "limits": "Fees drop with cumulative monthly volume; see bitpay.com/pricing"
+  },
+  {
     "slug": "eagle-virtual",
     "name": "Eagle Virtual",
     "url": "https://eaglevirtual.com",
