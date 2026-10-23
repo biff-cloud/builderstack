@@ -1,11 +1,12 @@
 ---
 import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json"; import Featured from "../../components/Featured.astro";
-// Sources checked 2026-10-18 (mempool repo 2026-10-23): all source URLs return 200; Blockscout + Otterscan repos not archived; Sourcify repo now argotorg/sourcify.
+// Sources checked 2026-10-18 (mempool repo 2026-10-23, Solana Explorer repo 2026-10-24): all source URLs return 200; Blockscout + Otterscan repos not archived; Sourcify repo now argotorg/sourcify.
 const picks = [
   { slug: "etherscan", src: "https://docs.etherscan.io", label: "API docs", note: "Default Ethereum explorer; the API is what most tools call for ABIs, tx history and contract verification." },
   { slug: "blockscout", src: "https://github.com/blockscout/blockscout", label: "Repo", note: "Open-source explorer you can host for your own chain or rollup; also runs public instances for many networks." },
   { slug: "sourcify", src: "https://github.com/argotorg/sourcify", label: "Repo", note: "Verify contract source against on-chain bytecode without an explorer account; open data any explorer can read." },
   { slug: "solscan", src: "https://solscan.io", label: "Site", note: "Solana explorer for accounts, tokens and transactions, with a paid API for higher volume." },
+  { slug: "solana-explorer", src: "https://github.com/solana-foundation/explorer", label: "Repo", note: "Solana Foundation's official explorer for mainnet, devnet and testnet; decodes program instructions, MIT so you can self-host it." },
   { slug: "otterscan", src: "https://github.com/otterscan/otterscan", label: "Repo", note: "Local explorer on top of your own Erigon or Reth node; fast traces with no rate limits, but needs an archive node." },
   { slug: "mempool-space", src: "https://github.com/mempool/mempool", label: "Repo", note: "Bitcoin explorer for fees, mempool and blocks, with a free public REST/WebSocket API; AGPL, so you can self-host it." },
 ].map(p => ({ ...p, t: tools.find(t => t.slug === p.slug) })).filter(p => p.t);
