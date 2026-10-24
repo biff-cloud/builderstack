@@ -275,7 +275,7 @@
     "url": "https://www.anchor-lang.com",
     "category": "Dev Frameworks",
     "pricing": "Open source",
-    "desc": "Solana Sealevel framework for programs.",
+    "desc": "Solana program framework: Rust eDSL for programs, IDL spec, TypeScript client generation from the IDL, and a CLI (install via AVM). Apache-2.0; repo now at github.com/otter-sec/anchor.",
     "freeTier": "Fully free (OSS)",
     "limits": "None (self-hosted)"
   },
