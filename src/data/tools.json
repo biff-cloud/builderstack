@@ -270,6 +270,16 @@
     "limits": "Team and Enterprise plans are contact-sales (no public price); Team covers 5 users, 10 codebases, monitoring bots"
   },
   {
+    "slug": "heimdall-rs",
+    "name": "Heimdall",
+    "url": "https://github.com/Jon-Becker/heimdall-rs",
+    "category": "Debugging & Simulation",
+    "pricing": "Free, open source (MIT)",
+    "desc": "Rust CLI toolkit for EVM bytecode analysis of unverified contracts: disassembly, control-flow graphs, decompilation, storage dumps, and calldata and trace decoding.",
+    "freeTier": "Fully free; install via the bifrost installer and run locally",
+    "limits": "Command-line only (no hosted UI); needs Rust and Cargo to build"
+  },
+  {
     "slug": "anchor",
     "name": "Anchor",
     "url": "https://www.anchor-lang.com",
