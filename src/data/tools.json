@@ -737,7 +737,7 @@
     "name": "Solana Pay",
     "url": "https://solana.com/docs/tools/solana-pay",
     "category": "Payments",
-    "pricing": "Free, open source (Apache-2.0)",
+    "pricing": "Free, open source (MIT)",
     "desc": "Open payments framework and JS SDK for accepting SOL and SPL-token (e.g. USDC) payments via QR codes and transaction requests.",
     "freeTier": "Free to use; payers pay Solana network fees",
     "limits": "Solana only; you build checkout or run the open-source POS app"
