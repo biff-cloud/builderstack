@@ -492,7 +492,7 @@
     "url": "https://github.com/solana-foundation/solana-web3.js",
     "category": "Frontend SDKs",
     "pricing": "Open source",
-    "desc": "Official Solana JavaScript/TypeScript SDK.",
+    "desc": "Official Solana JavaScript/TypeScript SDK. The 1.x line is maintenance-only; its successor is @solana/kit (anza-xyz/kit, MIT).",
     "freeTier": "Fully free (OSS)",
     "limits": "None (self-hosted)"
   },
