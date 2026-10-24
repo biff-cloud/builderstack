@@ -494,7 +494,23 @@
     "pricing": "Open source",
     "desc": "Official Solana JavaScript/TypeScript SDK. The 1.x line is maintenance-only; its successor is @solana/kit (anza-xyz/kit, MIT).",
     "freeTier": "Fully free (OSS)",
-    "limits": "None (self-hosted)"
+    "limits": "None (self-hosted)",
+    "alternatives": [
+      "solana-kit"
+    ]
+  },
+  {
+    "slug": "solana-kit",
+    "name": "@solana/kit",
+    "url": "https://www.solanakit.com",
+    "category": "Frontend SDKs",
+    "pricing": "Open source",
+    "desc": "Solana JavaScript SDK from Anza (anza-xyz/kit, MIT); the successor to solana/web3.js 1.x.",
+    "freeTier": "Fully free (OSS)",
+    "limits": "None (self-hosted)",
+    "alternatives": [
+      "solana-web3-js"
+    ]
   },
   {
     "slug": "reown",
