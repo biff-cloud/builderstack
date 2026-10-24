@@ -7,12 +7,13 @@ const picks = [
   { slug: "redstone", src: "https://docs.redstone.finance/docs/introduction", label: "Docs", note: "Push feeds for lending and vaults, pull feeds for gas-efficient integrations; 110+ chains. Also Bolt (fast chains), Live (offchain streaming) and Proof of Reserve for tokenized assets." },
   { slug: "api3", src: "https://api3.org", label: "Site", note: "First-party oracle feeds (100+ data feeds) that return OEV (oracle extractable value from liquidations) to the integrating protocol as rewards. Worth a look for lending protocols." },
   { slug: "chronicle", src: "https://docs.chroniclelabs.org", label: "Docs", note: "Scribe oracle on EVM chains: crypto, stablecoin, RWA and equity price feeds, plus Proof of Asset. Mainnet feeds are read-protected (get your contract whitelisted via a form); on testnets you whitelist yourself with the SelfKisser contract. No public price list." },
+  { slug: "dia", src: "https://www.diadata.org", label: "Site", note: "Price feeds for digital and real-world assets, fair-value feeds for reserve-backed tokens, randomness and ZK-verified offchain data, with the methodology published per feed. No public price list; feeds are set up through sales." },
   { slug: "uma", src: "https://docs.uma.xyz", label: "Docs", note: "Optimistic oracle: anyone proposes an answer with a bond; it is accepted unless disputed in the challenge period, and disputes go to a UMA token vote. For arbitrary questions, not prices: prediction markets (Polymarket), insurance, bridges." },
 ].map(p => ({ ...p, t: tools.find(t => t.slug === p.slug) })).filter(p => p.t);
 ---
 <Base title="Best blockchain oracles — BuilderStack" description={`Blockchain oracles compared for price feeds and arbitrary data: ${picks.map(p => p.t.name).join(", ")}.`}>
 <h1>Best blockchain oracles</h1>
-<p>{picks.length} picks: five price-feed oracles (push vs pull, latency, OEV), then an optimistic oracle for arbitrary data. Order is editorial, not paid.</p>
+<p>{picks.length} picks: six price-feed oracles (push vs pull, latency, OEV), then an optimistic oracle for arbitrary data. Order is editorial, not paid.</p>
 <Featured guide="oracles"/>
 <table style="width:100%;border-collapse:collapse;font-size:.95rem">
 <thead><tr>
