@@ -735,7 +735,7 @@
   {
     "slug": "solana-pay",
     "name": "Solana Pay",
-    "url": "https://docs.solanapay.com",
+    "url": "https://solana.com/docs/tools/solana-pay",
     "category": "Payments",
     "pricing": "Free, open source (Apache-2.0)",
     "desc": "Open payments framework and JS SDK for accepting SOL and SPL-token (e.g. USDC) payments via QR codes and transaction requests.",
