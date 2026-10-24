@@ -1,0 +1,35 @@
+---
+import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json"; import Featured from "../../components/Featured.astro";
+// Sources checked 2026-10-24: all source URLs return 200; Anchor repo (now otter-sec/anchor), solana-web3.js, Solana Playground and Explorer repos not archived, all pushed 22-23 Oct.
+const picks = [
+  { slug: "anchor", src: "https://github.com/otter-sec/anchor", label: "Repo", note: "Default framework for writing Solana programs in Rust: account validation macros, IDL generation and a TypeScript client." },
+  { slug: "solana-playground", src: "https://github.com/solana-playground/solana-playground", label: "Repo", note: "Browser IDE to write, build, deploy and test programs (Anchor included) with nothing installed; good for a first program or a quick repro." },
+  { slug: "solana-web3-js", src: "https://github.com/solana-foundation/solana-web3.js", label: "Repo", note: "Official JavaScript/TypeScript SDK for sending transactions and reading accounts. New work is on v3+; legacy v1.x gets critical fixes only." },
+  { slug: "helius", src: "https://www.helius.dev/pricing", label: "Pricing", note: "Solana-only RPC with webhooks and the DAS API for NFTs and tokens; free tier is enough for development." },
+  { slug: "solana-explorer", src: "https://github.com/solana-foundation/explorer", label: "Repo", note: "Official explorer for mainnet, devnet and testnet; decodes program instructions, so it doubles as a debugger for your own transactions." },
+].map(p => ({ ...p, t: tools.find(t => t.slug === p.slug) })).filter(p => p.t);
+---
+<Base title="Best Solana developer tools — BuilderStack" description={`A starter stack for building on Solana: ${picks.map(p => p.t.name).join(", ")}.`}>
+<h1>Best Solana developer tools</h1>
+<p>{picks.length} picks, one per job: program framework, browser IDE, client SDK, RPC and explorer. Order is editorial, not paid.</p>
+<Featured guide="solana-dev-tools"/>
+<table style="width:100%;border-collapse:collapse;font-size:.95rem">
+<thead><tr>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Tool</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Why</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Free tier</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Pricing</th>
+</tr></thead>
+<tbody>
+{picks.map(p => (
+<tr>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top"><a href={`${import.meta.env.BASE_URL}tools/${p.t.slug}/`}><b>{p.t.name}</b></a></td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.note} <small><a href={p.src} rel="nofollow">{p.label}</a></small></td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.t.freeTier}</td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.t.pricing}</td>
+</tr>
+))}
+</tbody>
+</table>
+<p><a href={`${import.meta.env.BASE_URL}best/`}>All use-case guides</a> · <a href={`${import.meta.env.BASE_URL}best/rpc-for-solana/`}>Best RPC for Solana</a> · <a href={`${import.meta.env.BASE_URL}category/dev-frameworks/`}>← Dev Frameworks</a></p>
+</Base>
