@@ -693,6 +693,16 @@
     "limits": "Mainnet feeds are read-protected; your address must be whitelisted via form"
   },
   {
+    "slug": "dia",
+    "name": "DIA",
+    "url": "https://www.diadata.org",
+    "category": "Oracles",
+    "pricing": "Custom (contact sales); platform code open source (GPL-3.0)",
+    "desc": "Oracle network with price feeds for digital assets and real-world assets, fundamental (fair-value) feeds for reserve-backed tokens, random number feeds, and ZK-verified offchain data; methodology published per feed.",
+    "freeTier": "No public price list; feed data browsable on the site's Explore data section",
+    "limits": "Pricing and feed setup go through the sales team; public docs site blocks scripted access"
+  },
+  {
     "slug": "coingecko-api",
     "name": "CoinGecko API",
     "url": "https://www.coingecko.com/en/api",
