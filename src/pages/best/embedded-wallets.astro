@@ -1,11 +1,12 @@
 ---
 import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json"; import Featured from "../../components/Featured.astro";
-// Sources checked 2026-10-22: all source URLs return 200; prices from each vendor's live pricing page.
+// Sources checked 2026-10-22 (ZeroDev 2026-10-25): all source URLs return 200; prices from each vendor's live pricing page.
 const picks = [
   { slug: "privy", src: "https://www.privy.io/pricing", label: "Pricing", note: "Embedded wallets plus login (email, social, passkeys). Free up to 500 MAU; Core $299/mo to 2,500 MAU; Scale $499/mo to 10,000. Most generous fixed free tier here for a small app." },
   { slug: "turnkey", src: "https://www.turnkey.com/pricing", label: "Pricing", note: "Key infrastructure in secure enclaves, priced per signature instead of per user: up to 1k wallets and 25 signatures/mo free, then $0.10/signature; Pro $99/mo at $0.05. Fits backends, agents and low-activity wallets." },
   { slug: "web3auth", src: "https://web3auth.io/pricing.html", label: "Pricing", note: "Social-login MPC wallets. Free Base plan up to 1,000 monthly active wallets; Growth $69/mo, Scale $399/mo. Docs now live under MetaMask Embedded Wallets (web3auth.io/docs redirects there)." },
   { slug: "reown", src: "https://reown.com/pricing", label: "Pricing", note: "AppKit (formerly WalletConnect): connect external wallets plus embedded wallets/SIWX. Starter $0 for 1 project and 500 MAU; Pro $890/yr after a 14-day trial. Pick it if most users already have a wallet." },
+  { slug: "zerodev", src: "https://zerodev.app/pricing", label: "Pricing", note: "Smart-account (account abstraction) wallets with social, passkey and email login, plus bundler, paymaster and session keys. Sandbox $0 is testnet only (10,000 credits); mainnet from Launch $69/mo, Scale $399/mo; 8% premium on sponsored gas. Pick it if you want gasless smart accounts from one vendor." },
   { slug: "dynamic", src: "https://www.dynamic.xyz/pricing", label: "Pricing", note: "Auth plus embedded and multi-wallet login. No free tier on the pricing page: Growth $249/mo up to 5,000 MAU, then $0.005 per MAU." },
 ].map(p => ({ ...p, t: tools.find(t => t.slug === p.slug) })).filter(p => p.t);
 ---
