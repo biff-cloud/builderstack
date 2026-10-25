@@ -1,12 +1,13 @@
 ---
 import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json"; import Featured from "../../components/Featured.astro";
-// Sources checked 2026-10-18 (BitPay added 2026-10-23, pricing 200): all source URLs return 200; BTCPay, Solana Pay (now solana-foundation/pay), Request Network repos not archived.
+// Sources checked 2026-10-18 (BitPay added 2026-10-23, OpenNode 2026-10-25, pricing 200): all source URLs return 200; BTCPay, Solana Pay (now solana-foundation/pay), Request Network repos not archived.
 const picks = [
   { slug: "btcpay-server", src: "https://github.com/btcpayserver/btcpayserver", label: "Repo", note: "Self-hosted and open source, no processing fee; funds go straight to your own wallet. You run and maintain the server." },
   { slug: "solana-pay", src: "https://github.com/solana-foundation/pay", label: "Repo", note: "Open standard and JS SDK for SOL and USDC payments via QR codes and transaction requests; you build the checkout." },
   { slug: "request-network", src: "https://docs.request.network", label: "Docs", note: "Invoices, payment requests and payouts on several chains through one API, with webhooks for reconciliation." },
   { slug: "nowpayments", src: "https://nowpayments.io/pricing", label: "Pricing", note: "Hosted gateway API, invoices and widgets for many coins; quickest to integrate, with a per-transaction fee." },
   { slug: "bitpay", src: "https://bitpay.com/pricing", label: "Pricing", note: "Long-running hosted gateway with invoices, payment links, shop plugins and a REST API; tiered per-transaction fee by monthly volume." },
+  { slug: "opennode", src: "https://opennode.com/pricing", label: "Pricing", note: "Hosted Bitcoin and Lightning processor with checkout, payment buttons, payouts and an API; optional instant conversion to local currency." },
   { slug: "coinpayments", src: "https://www.coinpayments.net/help-fees", label: "Fees", note: "Long-running hosted gateway with merchant API, shop plugins and batched withdrawals; per-transaction fees." },
 ].map(p => ({ ...p, t: tools.find(t => t.slug === p.slug) })).filter(p => p.t);
 ---
