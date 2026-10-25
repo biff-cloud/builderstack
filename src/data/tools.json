@@ -793,6 +793,16 @@
     "limits": "Fees drop with cumulative monthly volume; see bitpay.com/pricing"
   },
   {
+    "slug": "opennode",
+    "name": "OpenNode",
+    "url": "https://opennode.com",
+    "category": "Payments",
+    "pricing": "Per-transaction processing fee (see opennode.com/pricing); currency conversion free",
+    "desc": "Bitcoin and Lightning payment processor with hosted checkout, payment buttons, payouts and a Bitcoin API; optional automatic conversion to local currency at payment time.",
+    "freeTier": "Start free; no monthly fee listed",
+    "limits": "Withdrawals: scheduled free; on-demand free via Lightning, 1% on-chain; bank transfers to local currency"
+  },
+  {
     "slug": "eagle-virtual",
     "name": "Eagle Virtual",
     "url": "https://eaglevirtual.com",
