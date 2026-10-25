@@ -663,6 +663,16 @@
     "limits": "Mainnet usage paid; see site"
   },
   {
+    "slug": "zerodev",
+    "name": "ZeroDev",
+    "url": "https://zerodev.app",
+    "category": "Wallets & Custody",
+    "pricing": "Freemium",
+    "desc": "Smart account (account abstraction) infrastructure: embedded wallets with social, passkey and email login, bundler, paymaster gas sponsorship, and session-key/permission modules.",
+    "freeTier": "Sandbox $0/mo: testnet only, 10,000 credits",
+    "limits": "Mainnet from Launch $69/mo (100,000 credits); Scale $399/mo (1M credits); 8% gas sponsorship premium; see zerodev.app/pricing"
+  },
+  {
     "slug": "api3",
     "name": "API3",
     "url": "https://api3.org",
