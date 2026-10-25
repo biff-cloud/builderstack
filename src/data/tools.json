@@ -623,6 +623,16 @@
     "limits": "Local CLI; no hosted limits"
   },
   {
+    "slug": "halmos",
+    "name": "Halmos",
+    "url": "https://github.com/a16z/halmos",
+    "category": "Security",
+    "pricing": "Open source (AGPL-3.0)",
+    "desc": "Symbolic testing tool for EVM smart contracts (a16z crypto): reuses Foundry-style Solidity tests as formal-verification properties. Python CLI, install via uv or pip.",
+    "freeTier": "Fully free (OSS)",
+    "limits": "None (local CLI)"
+  },
+  {
     "slug": "otterscan",
     "name": "Otterscan",
     "url": "https://github.com/otterscan/otterscan",
