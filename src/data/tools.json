@@ -617,8 +617,8 @@
     "name": "Aderyn",
     "url": "https://github.com/Cyfrin/aderyn",
     "category": "Security",
-    "pricing": "Free (open source)",
-    "desc": "Rust-based Solidity static analyzer by Cyfrin with editor integration.",
+    "pricing": "Open source (GPL-3.0)",
+    "desc": "Rust-based Solidity static analyzer by Cyfrin: runs with no config on Foundry and Hardhat projects, writes Markdown, JSON and SARIF reports, and powers an official VS Code extension. Install via cyfrinup, curl, Homebrew or npm.",
     "freeTier": "Open source",
     "limits": "Local CLI; no hosted limits"
   },
