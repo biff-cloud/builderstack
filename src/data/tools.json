@@ -633,6 +633,16 @@
     "limits": "None (local CLI)"
   },
   {
+    "slug": "medusa",
+    "name": "Medusa",
+    "url": "https://github.com/crytic/medusa",
+    "category": "Security",
+    "pricing": "Open source (AGPL-3.0)",
+    "desc": "Coverage-guided, mutational Solidity fuzzer from Trail of Bits (crytic), built on go-ethereum and inspired by Echidna: parallel workers, property and assertion tests, coverage corpus. CLI plus a Go API (still under development).",
+    "freeTier": "Fully free (OSS)",
+    "limits": "None (local CLI)"
+  },
+  {
     "slug": "otterscan",
     "name": "Otterscan",
     "url": "https://github.com/otterscan/otterscan",
