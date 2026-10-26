@@ -643,6 +643,16 @@
     "limits": "None (local CLI)"
   },
   {
+    "slug": "wake",
+    "name": "Wake",
+    "url": "https://github.com/Ackee-Blockchain/wake",
+    "category": "Security",
+    "pricing": "Open source (ISC)",
+    "desc": "Python-based Solidity testing and fuzzing framework from Ackee Blockchain Security, built on pytest: property-based and manually-guided fuzzing, built-in vulnerability detectors (reentrancy, overflows), custom detectors, an LSP and VS Code extension, and GitHub Actions. Works with Anvil, Hardhat and Ganache.",
+    "freeTier": "Fully free (OSS)",
+    "limits": "None (local CLI)"
+  },
+  {
     "slug": "otterscan",
     "name": "Otterscan",
     "url": "https://github.com/otterscan/otterscan",
