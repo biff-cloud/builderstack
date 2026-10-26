@@ -1,11 +1,12 @@
 ---
 import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json"; import Featured from "../../components/Featured.astro";
-// Sources checked 2026-10-18: all source URLs return 200; GitHub repos not archived. Halmos added 2026-10-26 (repo 200, not archived). Medusa added 2026-10-26 (repo 200).
+// Sources checked 2026-10-18: all source URLs return 200; GitHub repos not archived. Halmos added 2026-10-26 (repo 200, not archived). Medusa added 2026-10-26 (repo 200). Wake added 2026-10-26 (repo 200, ISC).
 const picks = [
   { slug: "slither", src: "https://github.com/crytic/slither", label: "Repo", note: "Static analysis: fast Solidity detectors to run on every commit or in CI." },
   { slug: "aderyn", src: "https://github.com/Cyfrin/aderyn", label: "Repo", note: "Static analysis in Rust with editor integration; a second opinion next to Slither." },
   { slug: "echidna", src: "https://github.com/crytic/echidna", label: "Repo", note: "Fuzzing: write invariants and let it hunt for inputs that break them." },
   { slug: "medusa", src: "https://github.com/crytic/medusa", label: "Repo", note: "Fuzzing from Trail of Bits, built on go-ethereum: Echidna-style property and assertion tests run across parallel workers." },
+  { slug: "wake", src: "https://github.com/Ackee-Blockchain/wake", label: "Repo", note: "Python testing and fuzzing framework from Ackee, built on pytest, with built-in vulnerability detectors and a VS Code extension; fits teams who prefer Python to Solidity tests." },
   { slug: "mythril", src: "https://github.com/ConsenSysDiligence/mythril", label: "Repo", note: "Symbolic execution on EVM bytecode; slower, finds deeper paths. Releases are less frequent than the tools above." },
   { slug: "halmos", src: "https://github.com/a16z/halmos", label: "Repo", note: "Symbolic testing from a16z crypto: reuses your Foundry-style tests as properties checked for all inputs, run locally from the CLI." },
   { slug: "certora", src: "https://github.com/Certora/CertoraProver", label: "Repo", note: "Formal verification: prove rules hold for all inputs. Prover is open source; audits are paid." },
