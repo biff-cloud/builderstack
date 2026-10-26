@@ -280,6 +280,16 @@
     "limits": "Command-line only (no hosted UI); needs Rust and Cargo to build"
   },
   {
+    "slug": "walnut",
+    "name": "Walnut",
+    "url": "https://github.com/walnuthq/walnut",
+    "category": "Debugging & Simulation",
+    "pricing": "Free, source-available (BSL 1.1), self-hosted",
+    "desc": "Web-based EVM transaction debugger and simulator: full call traces, step-by-step debugging and simulations. Self-host it with Docker and point it at any RPC, which suits rollups and private chains.",
+    "freeTier": "Free to self-host with Docker or a local build",
+    "limits": "BSL 1.1 license, not OSI open source; local build needs SolDB (beta) and your own RPC endpoint"
+  },
+  {
     "slug": "anchor",
     "name": "Anchor",
     "url": "https://www.anchor-lang.com",
