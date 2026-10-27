@@ -773,6 +773,16 @@
     "limits": "Data comes through BandChain, so you depend on its validator set; node software is GPL-3.0"
   },
   {
+    "slug": "switchboard",
+    "name": "Switchboard",
+    "url": "https://switchboard.xyz",
+    "category": "Oracles",
+    "pricing": "Pay per oracle update on-chain (see Switchboard docs for current fees)",
+    "desc": "Permissionless pull-based (on-demand) oracle for Solana, Sui and EVM chains. Build custom price or API feeds in its Feed Builder, stream prices over WebSocket (Surge), and get verifiable randomness (VRF).",
+    "freeTier": "SDKs (npm @switchboard-xyz/on-demand, Rust crate switchboard-on-demand) and example repos are free",
+    "limits": "Pull model: your transaction must fetch and post a fresh quote; custom feeds are only as good as the sources you configure"
+  },
+  {
     "slug": "coingecko-api",
     "name": "CoinGecko API",
     "url": "https://www.coingecko.com/en/api",
