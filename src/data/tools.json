@@ -493,6 +493,16 @@
     "limits": "None (self-hosted)"
   },
   {
+    "slug": "scaffold-eth-2",
+    "name": "Scaffold-ETH 2",
+    "url": "https://scaffoldeth.io",
+    "category": "Dev Frameworks",
+    "pricing": "Free (open source, MIT)",
+    "desc": "Forkable Ethereum dapp starter (npx create-eth) built on Next.js, RainbowKit, Wagmi, Viem and Foundry or Hardhat. Frontend hot-reloads as contracts change, with typed React hooks, debug UI, burner wallet and local faucet.",
+    "freeTier": "Open source; run locally",
+    "limits": "Opinionated Next.js + Yarn stack; needs Node 22.13+; EVM only"
+  },
+  {
     "slug": "web3-js",
     "name": "web3.js",
     "url": "https://web3js.org",
