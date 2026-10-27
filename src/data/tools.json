@@ -753,6 +753,16 @@
     "limits": "Pricing and feed setup go through the sales team; public docs site blocks scripted access"
   },
   {
+    "slug": "band-protocol",
+    "name": "Band Protocol",
+    "url": "https://docs.bandchain.org",
+    "category": "Oracles",
+    "pricing": "Fees per data request on BandChain (see Band docs for gas and fees)",
+    "desc": "Cross-chain oracle built on its own Cosmos SDK chain (BandChain). Offers request-based data feeds, a permissionless concurrent price stream, and VRF randomness for smart contracts on many networks.",
+    "freeTier": "Docs, client libraries and testnet are free to use",
+    "limits": "Data comes through BandChain, so you depend on its validator set; node software is GPL-3.0"
+  },
+  {
     "slug": "coingecko-api",
     "name": "CoinGecko API",
     "url": "https://www.coingecko.com/en/api",
