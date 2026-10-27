@@ -673,6 +673,16 @@
     "limits": "None (local CLI)"
   },
   {
+    "slug": "solhint",
+    "name": "Solhint",
+    "url": "https://github.com/protofire/solhint",
+    "category": "Security",
+    "pricing": "Open source (MIT)",
+    "desc": "Solidity linter from Protofire covering both security and style-guide rules: a solhint:recommended ruleset, .solhint.json configs (including per-folder configs), inline disable comments, plugins, --fix autofix for several rules, caching, and stylish/JSON/SARIF output. Installs from npm (npm install -g solhint).",
+    "freeTier": "Fully free (OSS)",
+    "limits": "None (local CLI)"
+  },
+  {
     "slug": "otterscan",
     "name": "Otterscan",
     "url": "https://github.com/otterscan/otterscan",
