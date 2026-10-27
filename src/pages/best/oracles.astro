@@ -1,6 +1,6 @@
 ---
 import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json"; import Featured from "../../components/Featured.astro";
-// Sources checked 2026-10-22 (Chronicle 2026-10-23, Band 2026-10-27): all source URLs return 200. Chain/provider counts are the vendors' own figures from those pages.
+// Sources checked 2026-10-22 (Chronicle 2026-10-23, Band 2026-10-27, Switchboard 2026-10-27): all source URLs return 200. Chain/provider counts are the vendors' own figures from those pages.
 const picks = [
   { slug: "chainlink", src: "https://docs.chain.link/data-feeds", label: "Docs", note: "Push-based price, proof-of-reserve, NAV and rate feeds from decentralized oracle networks, published onchain on dozens of networks (EVM plus Solana, Aptos, Starknet, Stellar, Tron guides). Also VRF (verifiable randomness) and CCIP (cross-chain messaging). Used by lending markets, stablecoins and tokenized funds." },
   { slug: "pyth", src: "https://docs.pyth.network/price-feeds", label: "Docs", note: "First-party data from 120+ providers (exchanges, trading firms, market makers). Pyth Core: 400ms updates, push and pull, 100+ chains. Pyth Pro: subscription, lower latency, API key. Fits perps and anything latency-sensitive." },
@@ -9,12 +9,13 @@ const picks = [
   { slug: "chronicle", src: "https://docs.chroniclelabs.org", label: "Docs", note: "Scribe oracle on EVM chains: crypto, stablecoin, RWA and equity price feeds, plus Proof of Asset. Mainnet feeds are read-protected (get your contract whitelisted via a form); on testnets you whitelist yourself with the SelfKisser contract. No public price list." },
   { slug: "dia", src: "https://www.diadata.org", label: "Site", note: "Price feeds for digital and real-world assets, fair-value feeds for reserve-backed tokens, randomness and ZK-verified offchain data, with the methodology published per feed. No public price list; feeds are set up through sales." },
   { slug: "band-protocol", src: "https://docs.bandchain.org", label: "Docs", note: "Oracle running on its own Cosmos SDK chain (BandChain): request-based data feeds, a permissionless concurrent price stream, and VRF randomness, delivered to smart contracts on many networks. Fees are paid per data request on BandChain; no public price list beyond that." },
+  { slug: "switchboard", src: "https://github.com/switchboard-xyz/sb-on-demand-examples", label: "Examples", note: "Permissionless pull-based (on-demand) oracle for Solana, Sui and EVM chains: build custom price or API feeds in its Feed Builder, stream prices over WebSocket (Surge), plus VRF randomness. Your transaction fetches and posts a fresh quote; you pay per update onchain. No public price list." },
   { slug: "uma", src: "https://docs.uma.xyz", label: "Docs", note: "Optimistic oracle: anyone proposes an answer with a bond; it is accepted unless disputed in the challenge period, and disputes go to a UMA token vote. For arbitrary questions, not prices: prediction markets (Polymarket), insurance, bridges." },
 ].map(p => ({ ...p, t: tools.find(t => t.slug === p.slug) })).filter(p => p.t);
 ---
 <Base title="Best blockchain oracles — BuilderStack" description={`Blockchain oracles compared for price feeds and arbitrary data: ${picks.map(p => p.t.name).join(", ")}.`}>
 <h1>Best blockchain oracles</h1>
-<p>{picks.length} picks: seven price-feed oracles (push vs pull, latency, OEV), then an optimistic oracle for arbitrary data. Order is editorial, not paid.</p>
+<p>{picks.length} picks: eight price-feed oracles (push vs pull, latency, OEV), then an optimistic oracle for arbitrary data. Order is editorial, not paid.</p>
 <Featured guide="oracles"/>
 <table style="width:100%;border-collapse:collapse;font-size:.95rem">
 <thead><tr>
