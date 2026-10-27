@@ -1,17 +1,18 @@
 ---
 import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json"; import Featured from "../../components/Featured.astro";
-// Sources checked 2026-10-22: all source URLs return 200; Foundry, Hardhat, Ape, Remix repos not archived (pushed 21 Oct 2026); Anchor GitHub repo redirects to otter-sec/anchor, so we link the docs.
+// Sources checked 2026-10-22 (Scaffold-ETH 2 repo 200 on 2026-10-27, MIT): all source URLs return 200; Foundry, Hardhat, Ape, Remix repos not archived (pushed 21 Oct 2026); Anchor GitHub repo redirects to otter-sec/anchor, so we link the docs.
 const picks = [
   { slug: "foundry", src: "https://github.com/foundry-rs/foundry", label: "Repo", note: "Rust-built Solidity toolkit: forge for tests (written in Solidity, with fuzzing), cast for chain calls, anvil for a local node. Fastest test loop of the EVM options." },
   { slug: "hardhat", src: "https://github.com/NomicFoundation/hardhat", label: "Repo", note: "TypeScript/JavaScript environment with the largest plugin ecosystem; fits teams whose deploy scripts and frontend already live in JS." },
   { slug: "ape", src: "https://github.com/ApeWorX/ape", label: "Repo", note: "Python framework with plugins for Solidity and Vyper; the maintained successor its docs name for Brownie users." },
+  { slug: "scaffold-eth-2", src: "https://github.com/scaffold-eth/scaffold-eth-2", label: "Repo", note: "Full-stack starter rather than a bare framework: npx create-eth gives Foundry or Hardhat plus a Next.js frontend with typed hooks, a debug UI and a burner wallet. Pick it when you need a working dapp UI on day one." },
   { slug: "remix", src: "https://github.com/remix-project-org/remix-project", label: "Repo", note: "Browser IDE: compile, deploy and debug with nothing installed. Best for learning, quick prototypes and checking a snippet." },
   { slug: "anchor", src: "https://www.anchor-lang.com/docs", label: "Docs", note: "The standard framework for Solana programs in Rust: account validation macros, IDL generation and a TypeScript client." },
 ].map(p => ({ ...p, t: tools.find(t => t.slug === p.slug) })).filter(p => p.t);
 ---
 <Base title="Best smart contract development frameworks — BuilderStack" description={`Smart contract frameworks for EVM and Solana compared: ${picks.map(p => p.t.name).join(", ")}.`}>
 <h1>Best smart contract development frameworks</h1>
-<p>{picks.length} picks: EVM frameworks by language (Solidity, TypeScript, Python), a no-install browser IDE, then Solana. All free and open source. Order is editorial, not paid.</p>
+<p>{picks.length} picks: EVM frameworks by language (Solidity, TypeScript, Python), a full-stack dapp starter, a no-install browser IDE, then Solana. All free and open source. Order is editorial, not paid.</p>
 <Featured guide="smart-contract-frameworks"/>
 <table style="width:100%;border-collapse:collapse;font-size:.95rem">
 <thead><tr>
