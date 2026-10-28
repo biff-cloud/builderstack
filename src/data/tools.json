@@ -543,6 +543,16 @@
     ]
   },
   {
+    "slug": "alloy",
+    "name": "Alloy",
+    "url": "https://alloy.rs",
+    "category": "Frontend SDKs",
+    "pricing": "Open source (MIT or Apache-2.0)",
+    "desc": "Rust library for Ethereum and EVM chains, a ground-up rewrite of ethers-rs: providers, contracts, RPC types and signers in one alloy crate (cargo add alloy), with a full feature for WebSocket/IPC transports. Book at alloy.rs, API docs on docs.rs.",
+    "freeTier": "Fully free (OSS)",
+    "limits": "None (self-hosted)"
+  },
+  {
     "slug": "reown",
     "name": "Reown",
     "url": "https://reown.com",
