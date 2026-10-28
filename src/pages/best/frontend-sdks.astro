@@ -5,6 +5,7 @@ const picks = [
   { slug: "viem", src: "https://viem.sh/docs/introduction", label: "Docs", note: "Low-level TypeScript interface for Ethereum: clients, actions, ABI and type inference. The base layer under wagmi. Pick it for scripts, backends and framework-agnostic frontends." },
   { slug: "wagmi", src: "https://wagmi.sh/react/getting-started", label: "Docs", note: "React hooks for accounts, contract reads/writes and chain switching, built on viem. MIT. The default for React dapps." },
   { slug: "ethers-js", src: "https://docs.ethers.org/v6/", label: "Docs", note: "Complete Ethereum library (v6), MIT. Mature and widely documented; the usual migration target for web3.js code alongside viem." },
+  { slug: "alloy", src: "https://alloy.rs", label: "Book", note: "Rust library for Ethereum and EVM chains, a rewrite of ethers-rs (crate alloy, MIT or Apache-2.0). Pick it for Rust backends, bots and tooling rather than browser frontends." },
   { slug: "rainbowkit", src: "https://rainbowkit.com/docs/introduction", label: "Docs", note: "Drop-in React wallet-connect modal and account UI on top of wagmi. MIT." },
   { slug: "connectkit", src: "https://family.co/docs/connectkit", label: "Docs", note: "Wallet-connect UI by Family, also on wagmi; themeable alternative to RainbowKit. BSD-2-Clause." },
   { slug: "solana-web3-js", src: "https://github.com/solana-foundation/solana-web3.js", label: "Repo", note: "Official Solana JS/TS SDK. Per the repo, v1.x is no longer actively maintained (critical fixes only); new development is on v3+. Check which version a tutorial targets." },
@@ -12,7 +13,7 @@ const picks = [
 ---
 <Base title="Best web3 frontend SDKs — BuilderStack" description={`Web3 frontend SDKs and wallet-connect kits compared: ${picks.map(p => p.t.name).join(", ")}.`}>
 <h1>Best web3 frontend SDKs</h1>
-<p>{picks.length} picks: three EVM client libraries, two wallet-connect UIs, one Solana SDK. web3.js is left out: it was sunset on 4 Mar 2025 per web3js.org. Order is editorial, not paid.</p>
+<p>{picks.length} picks: four EVM client libraries (three TypeScript, one Rust), two wallet-connect UIs, one Solana SDK. web3.js is left out: it was sunset on 4 Mar 2025 per web3js.org. Order is editorial, not paid.</p>
 <Featured guide="frontend-sdks"/>
 <table style="width:100%;border-collapse:collapse;font-size:.95rem">
 <thead><tr>
