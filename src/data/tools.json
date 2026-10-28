@@ -893,6 +893,16 @@
     "limits": "Withdrawals: scheduled free; on-demand free via Lightning, 1% on-chain; bank transfers to local currency"
   },
   {
+    "slug": "moonpay-commerce",
+    "name": "MoonPay Commerce",
+    "url": "https://www.moonpay.com/business/commerce",
+    "category": "Payments",
+    "pricing": "Free + per-transaction fee",
+    "desc": "Crypto checkout for merchants and apps (formerly Helio): pay links, embeddable checkout widget, deposits, withdrawals, subscriptions, a Solana Pay Shopify plugin, webhooks and APIs/SDKs.",
+    "freeTier": "Free to start, self-serve",
+    "limits": "2% per transaction standard (1% with HelioX Pass); optional swaps 0.25%, auto-offramp to fiat 0.50%; custom pricing for high volume; per dev.commerce.moonpay.com/docs/pricing-fees"
+  },
+  {
     "slug": "eagle-virtual",
     "name": "Eagle Virtual",
     "url": "https://eaglevirtual.com",
