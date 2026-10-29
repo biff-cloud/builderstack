@@ -290,6 +290,16 @@
     "limits": "BSL 1.1 license, not OSI open source; local build needs SolDB (beta) and your own RPC endpoint"
   },
   {
+    "slug": "swiss-knife",
+    "name": "Swiss-Knife",
+    "url": "https://swiss-knife.xyz",
+    "category": "Debugging & Simulation",
+    "pricing": "Free, open source (MIT)",
+    "desc": "Browser toolbox for EVM developers: decode or encode calldata even without an ABI, read EIP-1967 and custom storage slots, compute CREATE/CREATE2 addresses, diff verified contracts across chains, view Foundry stack traces, and verify EIP-712 signatures.",
+    "freeTier": "All tools free in the browser; self-host the Next.js app from GitHub",
+    "limits": "Utility toolbox, not a full transaction tracer or simulator; pair it with Tenderly or Walnut for call traces"
+  },
+  {
     "slug": "anchor",
     "name": "Anchor",
     "url": "https://www.anchor-lang.com",
