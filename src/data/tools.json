@@ -733,6 +733,16 @@
     "limits": "Public API is rate limited; API docs in the repo's API.md"
   },
   {
+    "slug": "ethernal",
+    "name": "Ethernal",
+    "url": "https://tryethernal.com",
+    "category": "Explorers",
+    "pricing": "Free Starter/private plans + Team $150/mo + App Chain $500/mo + private Pro $20/mo",
+    "desc": "Block explorer for EVM chains you run yourself: spin one up for a testnet, L2 rollup or app chain, or a private one synced from Hardhat/Anvil with tx decoding and tracing. Open source (MIT), hosted or self-hosted.",
+    "freeTier": "Public Starter $0 (ads, 7-day retention); private Free $0 (1 workspace, 7-day retention)",
+    "limits": "Team $150/mo (100k txs, custom domain, no ads); App Chain $500/mo (5M txs, white-label); self-host is beta"
+  },
+  {
     "slug": "pimlico",
     "name": "Pimlico",
     "url": "https://www.pimlico.io",
