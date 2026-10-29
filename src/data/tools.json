@@ -723,6 +723,16 @@
     "limits": "Public API is rate limited; see mempool.space/docs/api"
   },
   {
+    "slug": "esplora",
+    "name": "Esplora (Blockstream.info)",
+    "url": "https://github.com/Blockstream/esplora",
+    "category": "Explorers",
+    "pricing": "Free (open source)",
+    "desc": "Blockstream's open-source Bitcoin and Liquid explorer behind Blockstream.info: blocks, txs, addresses, script/witness view, plus a public HTTP API.",
+    "freeTier": "Free web + public HTTP API; MIT, self-host via Docker",
+    "limits": "Public API is rate limited; API docs in the repo's API.md"
+  },
+  {
     "slug": "pimlico",
     "name": "Pimlico",
     "url": "https://www.pimlico.io",
