@@ -783,6 +783,19 @@
     "limits": "Mainnet from Launch $69/mo (100,000 credits); Scale $399/mo (1M credits); 8% gas sponsorship premium; see zerodev.app/pricing"
   },
   {
+    "slug": "metamask",
+    "name": "MetaMask",
+    "url": "https://metamask.io",
+    "category": "Wallets & Custody",
+    "pricing": "Free",
+    "desc": "Self-custody browser-extension wallet for Ethereum and EVM chains (Chrome, Chromium browsers, Firefox); the default injected window.ethereum provider most dapps test against, with developer docs at docs.metamask.io.",
+    "freeTier": "Free to install (extension source on GitHub: MetaMask/metamask-extension)",
+    "limits": "Network gas fees apply; custom license per repo (not a standard OSI license)",
+    "alternatives": [
+      "rabby"
+    ]
+  },
+  {
     "slug": "rabby",
     "name": "Rabby Wallet",
     "url": "https://rabby.io",
