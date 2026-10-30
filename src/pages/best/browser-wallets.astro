@@ -1,0 +1,34 @@
+---
+import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json"; import Featured from "../../components/Featured.astro";
+// Sources checked 2026-10-30: metamask.io, rabby.io, phantom.com return 200; facts from each tool's README or docs (see tool pages).
+const picks = [
+  { slug: "metamask", src: "https://github.com/MetaMask/metamask-extension", label: "Source", note: "The default injected window.ethereum provider most dapps test against. Test here first if you ship an EVM dapp. Chrome, Chromium browsers and Firefox." },
+  { slug: "rabby", src: "https://github.com/RabbyHub/Rabby", label: "Source", note: "Open-source EVM extension built for DeFi users. Injects the same window.ethereum provider, so a dapp that works with MetaMask-style wallets works here too. Worth a second test pass." },
+  { slug: "phantom", src: "https://docs.phantom.com", label: "Docs", note: "The most common injected wallet on Solana, also covering Ethereum, Bitcoin, Base, Polygon and HyperEVM. Extension plus iOS and Android apps; Phantom Connect SDKs if you want embedded wallets too." },
+].map(p => ({ ...p, t: tools.find(t => t.slug === p.slug) })).filter(p => p.t);
+---
+<Base title="Best browser wallets for dapp developers — BuilderStack" description={`Browser-extension wallets to test and support in your dapp: ${picks.map(p => p.t.name).join(", ")}.`}>
+<h1>Best browser wallets for dapp developers</h1>
+<p>{picks.length} picks for the extension wallets your users already have, so they are the ones to test your dapp against. All are free to install; users pay network fees. Checked 30 Oct 2026. Order is editorial, not paid.</p>
+<Featured guide="browser-wallets"/>
+<table style="width:100%;border-collapse:collapse;font-size:.95rem">
+<thead><tr>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Wallet</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Why</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Availability</th>
+<th style="text-align:left;border-bottom:1px solid #333;padding:.4rem">Limits</th>
+</tr></thead>
+<tbody>
+{picks.map(p => (
+<tr>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top"><a href={`${import.meta.env.BASE_URL}tools/${p.t.slug}/`}><b>{p.t.name}</b></a></td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.note} <small><a href={p.src} rel="nofollow">{p.label}</a></small></td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.t.freeTier}</td>
+<td style="border-bottom:1px solid #222;padding:.4rem;vertical-align:top">{p.t.limits}</td>
+</tr>
+))}
+</tbody>
+</table>
+<p>To give users a wallet without an extension, see <a href={`${import.meta.env.BASE_URL}best/embedded-wallets/`}>Best embedded wallet SDKs</a>. To connect many wallets from one button, see <a href={`${import.meta.env.BASE_URL}best/frontend-sdks/`}>Best web3 frontend SDKs</a>. For team treasuries, see <a href={`${import.meta.env.BASE_URL}tools/safe/`}>Safe</a>.</p>
+<p><a href={`${import.meta.env.BASE_URL}best/`}>All use-case guides</a> · <a href={`${import.meta.env.BASE_URL}category/wallets-custody/`}>← Wallets & Custody</a></p>
+</Base>
