@@ -470,6 +470,16 @@
     "limits": "Rate limits by plan; see site"
   },
   {
+    "slug": "reth",
+    "name": "Reth",
+    "url": "https://reth.rs",
+    "category": "RPC & Nodes",
+    "pricing": "Free (open source)",
+    "desc": "Paradigm's Rust Ethereum execution client (stable since 1.0, June 2024), pairs with any consensus client over the Engine API; for running your own RPC, indexing or MEV node instead of a hosted provider.",
+    "freeTier": "Free; Apache-2.0/MIT, self-hosted",
+    "limits": "You run the hardware; needs a consensus client alongside; OP-Reth moved to ethereum-optimism/optimism"
+  },
+  {
     "slug": "sourcify",
     "name": "Sourcify",
     "url": "https://sourcify.dev",
