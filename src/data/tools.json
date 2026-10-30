@@ -1098,5 +1098,19 @@
     "desc": "Crypto derivatives analytics: liquidation levels and heatmaps, open interest, customizable dashboards, screeners and a backtesting lab.",
     "freeTier": "Basic $0/mo: Tier 1 indicators, chart, data explorer, up to 1 saved alert",
     "limits": "Advanced $99/mo; Professional $499/mo (API + Tier 3); annual billing discounts on paid plans"
+  },
+  {
+    "slug": "coinbase-wallet-sdk",
+    "name": "Coinbase Wallet SDK",
+    "url": "https://github.com/coinbase/coinbase-wallet-sdk",
+    "category": "Frontend SDKs",
+    "pricing": "Open source",
+    "desc": "Official SDK (npm @coinbase/wallet-sdk, v4.4.0) that connects a web app to Coinbase Wallet and returns an EIP-1193 Ethereum provider via sdk.evm.getProvider(); docs at docs.cdp.coinbase.com.",
+    "freeTier": "Fully free (OSS)",
+    "limits": "EVM only; connects to Coinbase Wallet specifically; GitHub repo says MIT, npm package lists Apache-2.0",
+    "alternatives": [
+      "rainbowkit",
+      "connectkit"
+    ]
   }
 ]
