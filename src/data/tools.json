@@ -783,6 +783,16 @@
     "limits": "Mainnet from Launch $69/mo (100,000 credits); Scale $399/mo (1M credits); 8% gas sponsorship premium; see zerodev.app/pricing"
   },
   {
+    "slug": "rabby",
+    "name": "Rabby Wallet",
+    "url": "https://rabby.io",
+    "category": "Wallets & Custody",
+    "pricing": "Free",
+    "desc": "Open-source browser-extension wallet for Ethereum and EVM chains, built for DeFi; injects the standard window.ethereum provider, so dapps that support MetaMask-style wallets work with it.",
+    "freeTier": "Free to install (source on GitHub: RabbyHub/Rabby)",
+    "limits": "Network gas fees apply; custom license per repo (not a standard OSI license)"
+  },
+  {
     "slug": "api3",
     "name": "API3",
     "url": "https://api3.org",
