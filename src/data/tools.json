@@ -806,6 +806,20 @@
     "limits": "Network gas fees apply; custom license per repo (not a standard OSI license)"
   },
   {
+    "slug": "phantom",
+    "name": "Phantom",
+    "url": "https://phantom.com",
+    "category": "Wallets & Custody",
+    "pricing": "Free",
+    "desc": "Self-custody wallet (browser extension plus iOS and Android apps) for Solana, Ethereum, Bitcoin, Base, Polygon and HyperEVM; the most common injected wallet on Solana. Developers get the Phantom Connect SDKs (React, React Native, Browser) for embedded wallets and social login, plus an MCP server for AI agents (docs.phantom.com).",
+    "freeTier": "Free to install (extension for Chrome, Brave, Edge and other Chromium browsers; mobile apps)",
+    "limits": "Network fees apply; closed-source app; Sui support deprecated per docs",
+    "alternatives": [
+      "metamask",
+      "rabby"
+    ]
+  },
+  {
     "slug": "api3",
     "name": "API3",
     "url": "https://api3.org",
