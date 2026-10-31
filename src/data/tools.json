@@ -1112,5 +1112,20 @@
       "rainbowkit",
       "connectkit"
     ]
+  },
+  {
+    "slug": "squid-sdk",
+    "name": "SQD Squid SDK",
+    "url": "https://github.com/subsquid/squid-sdk",
+    "category": "Data & Indexing",
+    "pricing": "Open source",
+    "desc": "TypeScript ETL toolkit for indexing EVM, Substrate and Solana data, sourced from the SQD Network data lake instead of RPC; scaffold with npm i -g @subsquid/cli then sqd init.",
+    "freeTier": "Fully free (OSS)",
+    "limits": "Apache-2.0; a toolkit you assemble rather than a hosted indexing app; docs at docs.sqd.dev",
+    "alternatives": [
+      "ponder",
+      "subquery",
+      "envio"
+    ]
   }
 ]
