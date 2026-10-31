@@ -480,6 +480,19 @@
     "limits": "You run the hardware; needs a consensus client alongside; OP-Reth moved to ethereum-optimism/optimism"
   },
   {
+    "slug": "erigon",
+    "name": "Erigon",
+    "url": "https://erigon.tech",
+    "category": "RPC & Nodes",
+    "pricing": "Free (open source)",
+    "desc": "Go Ethereum execution client with an embedded consensus layer on by default; Erigon3 syncs from downloaded snapshots instead of re-executing from genesis and keeps per-transaction history, serving JSON-RPC, GraphQL and gRPC. For self-hosted archive or full nodes.",
+    "freeTier": "Free; LGPL-3.0, self-hosted",
+    "limits": "You run the hardware; Erigon3 does not store receipts and re-executes historical transactions on demand; pruning modes archive, full, blocks, minimal",
+    "alternatives": [
+      "reth"
+    ]
+  },
+  {
     "slug": "sourcify",
     "name": "Sourcify",
     "url": "https://sourcify.dev",
