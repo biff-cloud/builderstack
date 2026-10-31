@@ -10,11 +10,12 @@ const picks = [
   { slug: "drpc", src: "https://drpc.org/chainlist/ethereum", note: "Decentralized gateway; public Ethereum endpoints." },
   { slug: "ankr", src: "https://www.ankr.com/docs/rpc-service/chains/chains-list/", note: "Public and premium RPC across many EVM chains." },
   { slug: "reth", src: "https://reth.rs/", note: "Self-hosted option: run your own Rust execution client (pair with any consensus client) instead of renting endpoints." },
+  { slug: "erigon", src: "https://erigon.tech/", note: "Self-hosted option: Go execution client with embedded consensus layer, snapshot sync and per-transaction history for archive-style queries." },
 ].map(p => ({ ...p, t: tools.find(t => t.slug === p.slug) })).filter(p => p.t);
 ---
 <Base title="Best RPC providers for Ethereum & EVM — BuilderStack" description={`Ethereum and EVM RPC providers compared by free tier and limits: ${picks.map(p => p.t.name).join(", ")}.`}>
 <h1>Best RPC providers for Ethereum & EVM</h1>
-<p>{picks.length} RPC &amp; node options from the directory for Ethereum mainnet and EVM chains: hosted providers, plus one client to self-host. Order is editorial, not paid. Free tiers change, so verify on the vendor site.</p>
+<p>{picks.length} RPC &amp; node options from the directory for Ethereum mainnet and EVM chains: hosted providers, plus two clients to self-host. Order is editorial, not paid. Free tiers change, so verify on the vendor site.</p>
 <Featured guide="rpc-for-evm"/>
 <table style="width:100%;border-collapse:collapse;font-size:.95rem">
 <thead><tr>
