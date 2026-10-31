@@ -7,6 +7,7 @@ const picks = [
   { slug: "envio", src: "https://envio.dev/", note: "HyperIndex: event handlers in TypeScript across any EVM chain (plus Solana/Fuel)." },
   { slug: "goldsky", src: "https://docs.goldsky.com/introduction", note: "Managed subgraphs and streaming pipelines; Ethereum and other EVM chains." },
   { slug: "subquery", src: "https://subquery.network/networks", note: "Multi-chain indexer SDK; documents EVM support across many networks." },
+  { slug: "squid-sdk", src: "https://github.com/subsquid/squid-sdk", note: "Open-source TypeScript ETL toolkit; reads EVM data from the SQD Network data lake instead of RPC." },
   { slug: "bitquery", src: "https://bitquery.io/", note: "Pre-indexed multi-chain GraphQL/streams; Ethereum and other EVM listed." },
 ].map(p => ({ ...p, t: tools.find(t => t.slug === p.slug) })).filter(p => p.t);
 ---
