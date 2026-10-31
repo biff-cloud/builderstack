@@ -493,6 +493,20 @@
     ]
   },
   {
+    "slug": "geth",
+    "name": "Geth (go-ethereum)",
+    "url": "https://geth.ethereum.org",
+    "category": "RPC & Nodes",
+    "pricing": "Free (open source)",
+    "desc": "The Go reference execution client for Ethereum. Runs as a full node (default, snap sync) or an archive node that keeps all historical state, and serves JSON-RPC over HTTP, WebSocket and IPC. Ships dev tools like abigen for type-safe Go contract bindings.",
+    "freeTier": "Free; library LGPL-3.0, binaries GPL-3.0, self-hosted",
+    "limits": "You run the hardware (README: 16GB+ RAM and a 2-4TB NVMe SSD recommended); needs a separate consensus client to follow mainnet",
+    "alternatives": [
+      "reth",
+      "erigon"
+    ]
+  },
+  {
     "slug": "sourcify",
     "name": "Sourcify",
     "url": "https://sourcify.dev",
