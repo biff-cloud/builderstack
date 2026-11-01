@@ -522,6 +522,21 @@
     ]
   },
   {
+    "slug": "besu",
+    "name": "Besu",
+    "url": "https://docs.besu-eth.org/",
+    "category": "RPC & Nodes",
+    "pricing": "Free (open source)",
+    "desc": "Mainnet-compatible Ethereum execution client written in Java, maintained under LF Decentralized Trust. Exposes the standard JSON-RPC API, ships Prometheus-style metrics, and is the usual pick when you also need private or permissioned networks alongside public mainnet.",
+    "freeTier": "Free; Apache-2.0, self-hosted",
+    "limits": "You run the hardware (see docs.besu-eth.org system requirements) and tune the JVM; needs a separate consensus client (e.g. Teku) to follow mainnet",
+    "alternatives": [
+      "geth",
+      "nethermind",
+      "reth"
+    ]
+  },
+  {
     "slug": "sourcify",
     "name": "Sourcify",
     "url": "https://sourcify.dev",
