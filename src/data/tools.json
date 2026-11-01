@@ -507,6 +507,21 @@
     ]
   },
   {
+    "slug": "nethermind",
+    "name": "Nethermind",
+    "url": "https://www.nethermind.io/nethermind-client",
+    "category": "RPC & Nodes",
+    "pricing": "Free (open source)",
+    "desc": "Ethereum execution client built on .NET, in production since 2017. Snap sync on by default, JSON-RPC over HTTP, WebSocket and IPC (same API as Geth, with a migration guide), a built-in health UI plus Prometheus metrics, and a plugin system for adding RPC namespaces or consensus engines without forking.",
+    "freeTier": "Free; LGPL-3.0, self-hosted",
+    "limits": "You run the hardware (see docs.nethermind.io system requirements); needs a separate consensus client to follow mainnet (Sedge sets one up alongside); runs on Linux, Windows and macOS",
+    "alternatives": [
+      "geth",
+      "reth",
+      "erigon"
+    ]
+  },
+  {
     "slug": "sourcify",
     "name": "Sourcify",
     "url": "https://sourcify.dev",
