@@ -382,10 +382,10 @@
   {
     "slug": "dynamic",
     "name": "Dynamic",
-    "url": "https://www.dynamic.xyz",
+    "url": "https://www.dynamic.xyz/docs/get-started/welcome",
     "category": "Wallets & Custody",
     "pricing": "Paid",
-    "desc": "Auth and embedded / multi-wallet login for apps.",
+    "desc": "Auth and embedded / multi-wallet login for apps. Part of Fireblocks since Oct 2025.",
     "freeTier": "No free tier listed on pricing page (checked 22 Oct 2026)",
     "limits": "Growth $249/mo up to 5,000 MAU, then $0.005 per MAU; Enterprise custom"
   },
