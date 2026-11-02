@@ -1214,5 +1214,20 @@
       "coingate",
       "nowpayments"
     ]
+  },
+  {
+    "slug": "4byte-directory",
+    "name": "4byte.directory",
+    "url": "https://www.4byte.directory/",
+    "category": "Debugging & Simulation",
+    "pricing": "Free",
+    "desc": "Public registry that maps 4-byte EVM function selectors (and event topics) to human-readable signatures, with a free REST API; handy for decoding unknown calldata. Note: anyone can submit, so one selector can return several (sometimes spam) matches.",
+    "freeTier": "Free website and REST API, no key needed",
+    "limits": "Community-submitted data, no SLA; repo pipermerriam/ethereum-function-signature-registry last pushed Apr 2023 (checked Nov 2026)",
+    "alternatives": [
+      "evm-codes",
+      "swiss-knife",
+      "heimdall-rs"
+    ]
   }
 ]
