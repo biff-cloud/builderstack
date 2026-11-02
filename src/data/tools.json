@@ -1184,5 +1184,20 @@
       "subquery",
       "envio"
     ]
+  },
+  {
+    "slug": "coingate",
+    "name": "CoinGate",
+    "url": "https://coingate.com/",
+    "category": "Payments",
+    "pricing": "1% per transaction",
+    "desc": "Hosted crypto payment gateway for merchants: checkout integration, invoicing, payment channels, payouts and refunds, with plugins for WooCommerce, WHMCS and more plus an API (developer.coingate.com).",
+    "freeTier": "No monthly fees on Standard; you pay per transaction",
+    "limits": "Standard: 1% processing fee, 10+ cryptocurrencies, payouts 0.50 EUR + 0.5%, 50 EUR minimum withdrawal; Enterprise pricing is custom (per coingate.com/pricing, Nov 2026)",
+    "alternatives": [
+      "nowpayments",
+      "coinpayments",
+      "btcpay-server"
+    ]
   }
 ]
