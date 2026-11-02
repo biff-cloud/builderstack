@@ -1199,5 +1199,20 @@
       "coinpayments",
       "btcpay-server"
     ]
+  },
+  {
+    "slug": "bitcart",
+    "name": "Bitcart",
+    "url": "https://bitcart.ai/",
+    "category": "Payments",
+    "pricing": "Free, open source (MIT, self-hosted)",
+    "desc": "Self-hosted, non-custodial crypto payment processor with a merchant API, admin panel and ready-made store; accepts BTC, LTC, BCH, XMR, ETH, TRX, USDT and more (docs.bitcart.ai).",
+    "freeTier": "Free; no processing fees, you pay only your own hosting",
+    "limits": "Self-hosted; no platform limits (per bitcart.ai and github.com/bitcart/bitcart, Nov 2026)",
+    "alternatives": [
+      "btcpay-server",
+      "coingate",
+      "nowpayments"
+    ]
   }
 ]
