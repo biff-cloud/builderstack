@@ -1,8 +1,9 @@
 ---
 import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json"; import Featured from "../../components/Featured.astro";
-// Sources checked 2026-10-18 (BitPay added 2026-10-23, OpenNode 2026-10-25, MoonPay Commerce 2026-10-28, pricing 200): all source URLs return 200; BTCPay, Solana Pay (now solana-foundation/pay), Request Network repos not archived.
+// Sources checked 2026-10-18 (BitPay added 2026-10-23, OpenNode 2026-10-25, MoonPay Commerce 2026-10-28, Bitcart 2026-11-02, pricing 200): all source URLs return 200; BTCPay, Solana Pay (now solana-foundation/pay), Request Network repos not archived.
 const picks = [
   { slug: "btcpay-server", src: "https://github.com/btcpayserver/btcpayserver", label: "Repo", note: "Self-hosted and open source, no processing fee; funds go straight to your own wallet. You run and maintain the server." },
+  { slug: "bitcart", src: "https://github.com/bitcart/bitcart", label: "Repo", note: "Self-hosted, non-custodial processor (MIT) with a merchant API, admin panel and ready-made store; supports BTC, ETH, TRX, XMR, USDT and more. You run the server." },
   { slug: "solana-pay", src: "https://github.com/solana-foundation/pay", label: "Repo", note: "Open standard and JS SDK for SOL and USDC payments via QR codes and transaction requests; you build the checkout." },
   { slug: "request-network", src: "https://docs.request.network", label: "Docs", note: "Invoices, payment requests and payouts on several chains through one API, with webhooks for reconciliation." },
   { slug: "nowpayments", src: "https://nowpayments.io/pricing", label: "Pricing", note: "Hosted gateway API, invoices and widgets for many coins; quickest to integrate, with a per-transaction fee." },
