@@ -937,6 +937,16 @@
     "limits": "Pull model: your transaction must fetch and post a fresh quote; custom feeds are only as good as the sources you configure"
   },
   {
+    "slug": "tellor",
+    "name": "Tellor",
+    "url": "https://tellor.io",
+    "category": "Oracles",
+    "pricing": "Data is reported by staked TRB reporters; see Tellor docs for current tipping and fee model",
+    "desc": "Oracle network running its own Layer 1 chain (tellor-1) where staked reporters submit any requested data and validators sign it before it is relayed to EVM chains. Designed for subjective or custom data, with an open dispute process.",
+    "freeTier": "Open-source contracts and tooling (usingtellor is MIT); docs at docs.tellor.io",
+    "limits": "Values are disputable, so integrations should wait out a dispute window before trusting fresh data; validator set is capped at 100"
+  },
+  {
     "slug": "coingecko-api",
     "name": "CoinGecko API",
     "url": "https://www.coingecko.com/en/api",
