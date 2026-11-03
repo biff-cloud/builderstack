@@ -700,6 +700,16 @@
     "limits": "Hosted/network usage paid; see site"
   },
   {
+    "slug": "sqd",
+    "name": "SQD (Subsquid)",
+    "url": "https://www.sqd.ai",
+    "category": "Data & Indexing",
+    "pricing": "SQD Cloud is pay-as-you-go for indexer compute and storage; data access via a paid Portal plan is billed separately; see docs.sqd.ai/cloud/pricing",
+    "desc": "Indexing stack with the Squid SDK, a TypeScript ETL toolkit for Ethereum, Solana and Substrate data that pulls from the SQD Network data lake and serves results over GraphQL or into your own database.",
+    "freeTier": "Squid SDK is open source (Apache-2.0); each SQD Cloud account gets one free playground squid, and a rate-limited public Portal is free",
+    "limits": "The free playground squid has limits; production squids need a Professional organization, and Portal data access beyond the public rate limit is paid"
+  },
+  {
     "slug": "bitquery",
     "name": "Bitquery",
     "url": "https://bitquery.io",
