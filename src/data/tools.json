@@ -877,6 +877,16 @@
     ]
   },
   {
+    "slug": "biconomy",
+    "name": "Biconomy",
+    "url": "https://www.biconomy.io",
+    "category": "Wallets & Custody",
+    "pricing": "Usage-based for sponsored gas and the Supertransaction API; see the Biconomy dashboard for current rates",
+    "desc": "Smart-account and orchestration stack: the Nexus smart account, the AbstractJS SDK and a Supertransaction API that runs multi-chain batched calls from one signature, with gas sponsorship, gas paid in tokens and session keys for automation.",
+    "freeTier": "AbstractJS SDK is open source (MIT) and testnets are supported; docs at docs.biconomy.io",
+    "limits": "Sponsored gas and orchestration run through Biconomy's hosted infrastructure; cross-chain flows add quote and execution steps to debug"
+  },
+  {
     "slug": "api3",
     "name": "API3",
     "url": "https://api3.org",
