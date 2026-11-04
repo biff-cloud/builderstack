@@ -577,7 +577,8 @@
     "pricing": "Free and open source (Apache-2.0)",
     "desc": "Pythonic smart contract framework from Cyfrin for Vyper, built on Titanoboa: compile, test with pytest-style fixtures, fuzz, script deployments, verify contracts and run against forked or ZKsync (EraVM) networks from one CLI.",
     "freeTier": "Fully free; install from PyPI (pip or uv)",
-    "limits": "Vyper-first; needs Python 3.11 to 3.13; docs say it is under active development"
+    "limits": "Vyper-first; needs Python 3.11 to 3.13; docs say it is under active development",
+    "alternatives": ["titanoboa", "ape", "foundry"]
   },
   {
     "slug": "titanoboa",
