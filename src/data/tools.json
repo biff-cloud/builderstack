@@ -580,6 +580,21 @@
     "limits": "Vyper-first; needs Python 3.11 to 3.13; docs say it is under active development"
   },
   {
+    "slug": "titanoboa",
+    "name": "Titanoboa",
+    "url": "https://titanoboa.readthedocs.io/",
+    "category": "Dev Frameworks",
+    "pricing": "Free and open source (MIT)",
+    "desc": "Vyper interpreter from the vyperlang org that runs contracts directly in Python: unit tests with pytest, Hypothesis fuzzing and stateful testing, gas profiling, coverage, forking live networks and interactive Jupyter notebooks. Moccasin is built on it.",
+    "freeTier": "Fully free; install from PyPI (titanoboa)",
+    "limits": "Vyper only; a library rather than a full project framework, so pair it with Moccasin for scripts and deploys",
+    "alternatives": [
+      "moccasin",
+      "ape",
+      "foundry"
+    ]
+  },
+  {
     "slug": "scaffold-eth-2",
     "name": "Scaffold-ETH 2",
     "url": "https://scaffoldeth.io",
