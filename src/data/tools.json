@@ -1340,5 +1340,20 @@
       "envio",
       "sqd"
     ]
+  },
+  {
+    "slug": "trueblocks",
+    "name": "TrueBlocks",
+    "url": "https://trueblocks.io",
+    "category": "Data & Indexing",
+    "pricing": "Free and open source (GPL-3.0)",
+    "desc": "Local-first EVM indexer (Unchained Index) and chifra CLI/API for address appearance histories, logs, ERC-20 holdings, and reconciled accounting exports \u2014 stays on your machine against your own RPC.",
+    "freeTier": "Fully free; self-host via install docs or Docker; homepage states no paid plans and no rate limits (open-source public good)",
+    "limits": "Designed for single-user/local use (chifra serve not for multi-user cloud); needs your own RPC; GPL-3.0",
+    "alternatives": [
+      "rindexer",
+      "cryo",
+      "ponder"
+    ]
   }
 ]
