@@ -8,6 +8,7 @@ const picks = [
   { slug: "goldsky", src: "https://docs.goldsky.com/introduction", note: "Managed subgraphs and streaming pipelines; Ethereum and other EVM chains." },
   { slug: "subquery", src: "https://subquery.network/networks", note: "Multi-chain indexer SDK; documents EVM support across many networks." },
   { slug: "squid-sdk", src: "https://github.com/subsquid/squid-sdk", note: "Open-source TypeScript ETL toolkit; reads EVM data from the SQD Network data lake instead of RPC." },
+  { slug: "rindexer", src: "https://github.com/joshstevens19/rindexer", note: "Open-source Rust indexer for any EVM chain; no-code YAML config, built-in GraphQL API." },
   { slug: "bitquery", src: "https://bitquery.io/", note: "Pre-indexed multi-chain GraphQL/streams; Ethereum and other EVM listed." },
 ].map(p => ({ ...p, t: tools.find(t => t.slug === p.slug) })).filter(p => p.t);
 ---
