@@ -1325,5 +1325,20 @@
       "heimdall-rs",
       "swiss-knife"
     ]
+  },
+  {
+    "slug": "cryo",
+    "name": "cryo",
+    "url": "https://github.com/paradigmxyz/cryo",
+    "category": "Data & Indexing",
+    "pricing": "Free and open source (MIT OR Apache-2.0)",
+    "desc": "Paradigm's Rust CLI and Python library for extracting EVM blockchain data (blocks, txs, logs, traces, storage diffs, and more) into parquet, CSV, JSON, or pandas dataframes over JSON-RPC. Filter by block range, contract, or columns; schemas print before collect.",
+    "freeTier": "Fully free; install CLI via cargo install cryo_cli or Python via pip install cryo (PyPI cryo 0.3.2 as of Nov 2026)",
+    "limits": "Needs your own ETH_RPC_URL / --rpc; README warns default concurrency can overwhelm third-party RPC providers (use --requests-per-second / --max-concurrent-requests); still marked early WIP",
+    "alternatives": [
+      "rindexer",
+      "envio",
+      "sqd"
+    ]
   }
 ]
