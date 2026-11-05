@@ -1101,7 +1101,7 @@
     "name": "BitPay",
     "url": "https://bitpay.com",
     "category": "Payments",
-    "pricing": "2% + 25¢ per transaction under $500K/mo; 1.5% + 25¢ to $1M; 1% + 25¢ above (higher for high-risk industries)",
+    "pricing": "2% + 25\u00a2 per transaction under $500K/mo; 1.5% + 25\u00a2 to $1M; 1% + 25\u00a2 above (higher for high-risk industries)",
     "desc": "Hosted crypto payment processor for merchants, with invoices, payment links and a REST API.",
     "freeTier": "No monthly fee; per-transaction fees only",
     "limits": "Fees drop with cumulative monthly volume; see bitpay.com/pricing"
@@ -1309,6 +1309,21 @@
       "evm-codes",
       "swiss-knife",
       "heimdall-rs"
+    ]
+  },
+  {
+    "slug": "whatsabi",
+    "name": "whatsabi",
+    "url": "https://github.com/shazow/whatsabi",
+    "category": "Debugging & Simulation",
+    "pricing": "Free, open source (MIT)",
+    "desc": "TypeScript library that guesses ABIs and resolves proxies from Ethereum bytecode for unverified contracts: extract selectors, look up signatures (Sourcify, Etherscan, Blockscout, OpenChain, 4byte), and autoload an ABI-like interface; used by Otterscan, Sourcify, and cast. npm @shazow/whatsabi.",
+    "freeTier": "Fully free MIT library; install via npm (@shazow/whatsabi, latest 0.30.0 as of Nov 2026) and run in Node or the browser",
+    "limits": "Bytecode/selector heuristics plus public signature databases, not a full decompiler or source recovery; proxy resolution and ABI loaders need an RPC provider (and optional explorer API keys for some loaders)",
+    "alternatives": [
+      "4byte-directory",
+      "heimdall-rs",
+      "swiss-knife"
     ]
   }
 ]
