@@ -1370,5 +1370,20 @@
       "blockscout",
       "ethernal"
     ]
+  },
+  {
+    "slug": "vyper",
+    "name": "Vyper",
+    "url": "https://vyperlang.org",
+    "category": "Dev Frameworks",
+    "pricing": "Free and open source (Apache-2.0)",
+    "desc": "Pythonic smart-contract language for the EVM from the vyperlang org: security- and readability-focused compiler with built-in overflow checks, reentrancy guards, and bounds checking. Install from PyPI (vyper 0.4.3 as of Nov 2026; Python 3.10\u20133.13).",
+    "freeTier": "Fully free; pip install vyper, or use docs/online compiler and try.vyperlang.org",
+    "limits": "Compiler/language only (pair with Moccasin or Titanoboa for project workflow); LICENSE is Apache-2.0 with an added ML-program carve-out (GitHub SPDX shows Other)",
+    "alternatives": [
+      "titanoboa",
+      "moccasin",
+      "foundry"
+    ]
   }
 ]
