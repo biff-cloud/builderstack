@@ -1355,5 +1355,20 @@
       "cryo",
       "ponder"
     ]
+  },
+  {
+    "slug": "routescan",
+    "name": "Routescan",
+    "url": "https://routescan.io/",
+    "category": "Explorers",
+    "pricing": "Free API + Standard $200/mo \u2026 Pro Plus $550/mo; managed explorer by proposal",
+    "desc": "Multichain EVM block explorer with Data API, Etherscan-compatible API, paid Blockscout-compatible API, MCP server, and managed white-label explorers \u2014 indexes ~23 mainnet networks including Ethereum, Avalanche C-Chain, Mantle, and Blast.",
+    "freeTier": "No key: 2 rps / 10k calls/day (Data API + Etherscan-compatible; Blockscout-compatible not included). Free key: 5 rps / 100k/day. Free plans need a backlink or \u201cPowered by Routescan.io APIs\u201d except private use.",
+    "limits": "Standard $200/mo 10 rps / 200k/day + Blockscout-compatible; Advanced $300/mo 20 rps / 500k/day; Professional $400/mo 30 rps / 1M/day; Pro Plus $550/mo 30 rps / 1.5M/day; managed/custom by written proposal. Commercial service (not an open-source explorer).",
+    "alternatives": [
+      "etherscan",
+      "blockscout",
+      "ethernal"
+    ]
   }
 ]
