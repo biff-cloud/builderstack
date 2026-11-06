@@ -1385,5 +1385,20 @@
       "moccasin",
       "foundry"
     ]
+  },
+  {
+    "slug": "web3-py",
+    "name": "web3.py",
+    "url": "https://web3py.readthedocs.io/",
+    "category": "Frontend SDKs",
+    "pricing": "Free and open source (MIT)",
+    "desc": "Python library for Ethereum JSON-RPC and smart contracts (ApeWorX/web3.py, formerly ethereum/web3.py): providers, contracts, accounts, middleware and ENS. Install from PyPI (web3 8.0.0 as of Nov 2026; Python 3.10\u20133.14).",
+    "freeTier": "Fully free; pip install web3",
+    "limits": "None (self-hosted library); needs an RPC endpoint for live chain calls",
+    "alternatives": [
+      "ethers-js",
+      "viem",
+      "web3-js"
+    ]
   }
 ]
