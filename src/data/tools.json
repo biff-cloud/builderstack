@@ -1400,5 +1400,20 @@
       "viem",
       "web3-js"
     ]
+  },
+  {
+    "slug": "magic",
+    "name": "Magic",
+    "url": "https://magic.link/",
+    "category": "Wallets & Custody",
+    "pricing": "Free + paid",
+    "desc": "Embedded non-custodial wallets and auth for apps (Magic Labs): email, SMS, social and external-wallet login, wallet UI widgets, server wallets. SDK magiclabs/magic-js (Apache-2.0 on GitHub; npm magic-sdk 33.13.0).",
+    "freeTier": "Developer $0/mo: 1,000 Monthly Active Wallets + 50,000 signatures (checked 7 Nov 2026 on magic.link/pricing)",
+    "limits": "Startup $99/mo: 2,500 MAW + 50,000 signatures; overage $0.045/$0.04 per MAW (Developer/Startup) and $0.005 per signature; Enterprise custom",
+    "alternatives": [
+      "privy",
+      "dynamic",
+      "web3auth"
+    ]
   }
 ]
