@@ -10,11 +10,12 @@ const picks = [
   { slug: "squid-sdk", src: "https://github.com/subsquid/squid-sdk", note: "Open-source TypeScript ETL toolkit; reads EVM data from the SQD Network data lake instead of RPC." },
   { slug: "rindexer", src: "https://github.com/joshstevens19/rindexer", note: "Open-source Rust indexer for any EVM chain; no-code YAML config, built-in GraphQL API." },
   { slug: "bitquery", src: "https://bitquery.io/", note: "Pre-indexed multi-chain GraphQL/streams; Ethereum and other EVM listed." },
+  { slug: "trueblocks", src: "https://trueblocks.io", note: "Local-first option: Unchained Index + chifra CLI/API for address appearance histories, logs, and holdings against your own RPC (not a managed subgraph)." },
 ].map(p => ({ ...p, t: tools.find(t => t.slug === p.slug) })).filter(p => p.t);
 ---
 <Base title="Best indexers for EVM — BuilderStack" description={`EVM indexers compared by free tier and pricing: ${picks.map(p => p.t.name).join(", ")}.`}>
 <h1>Best indexers for EVM</h1>
-<p>{picks.length} Data &amp; Indexing tools from the directory that index Ethereum / EVM chains. Order is editorial, not paid. Free tiers change, so verify on the vendor site.</p>
+<p>{picks.length} Data &amp; Indexing tools from the directory that index Ethereum / EVM chains: managed/subgraph-style indexers, plus one local-first Unchained Index option. Order is editorial, not paid. Free tiers change, so verify on the vendor site.</p>
 <Featured guide="indexer-for-evm"/>
 <table style="width:100%;border-collapse:collapse;font-size:.95rem">
 <thead><tr>
