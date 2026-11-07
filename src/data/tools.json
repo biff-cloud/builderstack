@@ -1415,5 +1415,20 @@
       "dynamic",
       "web3auth"
     ]
+  },
+  {
+    "slug": "gelato",
+    "name": "Gelato",
+    "url": "https://www.gelato.network",
+    "category": "Wallets & Custody",
+    "pricing": "Free + paid",
+    "desc": "Paymaster & Bundler (ERC-4337 and EIP-7702) for gas sponsorship or ERC-20 gas across 100+ chains, plus Turbo relay and rollup infra (based/ZK/custom). Smart-wallet SDK; API key at app.gelato.cloud. (Web3 Functions/Automate sunset Mar 2026.)",
+    "freeTier": "API key free to start; CU Free plan on docs historically \u2014 pricing page down 7 Nov 2026, confirm in dashboard",
+    "limits": "Sponsored gas billed post-execution from a unified gas tank; plan CU/RPM by product \u2014 see docs.gelato.cloud or dashboard",
+    "alternatives": [
+      "pimlico",
+      "biconomy",
+      "zerodev"
+    ]
   }
 ]
