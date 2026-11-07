@@ -1430,5 +1430,15 @@
       "biconomy",
       "zerodev"
     ]
+  },
+  {
+    "slug": "lighthouse",
+    "name": "Lighthouse",
+    "url": "https://lighthouse.sigmaprime.io/",
+    "category": "RPC & Nodes",
+    "pricing": "Free (open source)",
+    "desc": "Sigma Prime's Rust Ethereum consensus client for the Beacon Chain: validator duties, attestation processing, fork choice, finality, and the Engine API to an execution client (Geth/Reth/Nethermind/Besu/Erigon). Production since Beacon Chain genesis (Dec 2020); docs in the Lighthouse Book. GitHub sigp/lighthouse (Apache-2.0; latest stable v8.3.2, 23 Oct 2026).",
+    "freeTier": "Free; Apache-2.0, self-hosted (no Lighthouse token; grant/donation funded)",
+    "limits": "You run the hardware; needs a separate execution client over the Engine API to follow mainnet; staking carries offline/slash risk (see launchpad FAQs)"
   }
 ]
