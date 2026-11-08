@@ -1439,7 +1439,11 @@
     "pricing": "Free (open source)",
     "desc": "Sigma Prime's Rust Ethereum consensus client for the Beacon Chain: validator duties, attestation processing, fork choice, finality, and the Engine API to an execution client (Geth/Reth/Nethermind/Besu/Erigon). Production since Beacon Chain genesis (Dec 2020); docs in the Lighthouse Book. GitHub sigp/lighthouse (Apache-2.0; latest stable v8.3.2, 23 Oct 2026).",
     "freeTier": "Free; Apache-2.0, self-hosted (no Lighthouse token; grant/donation funded)",
-    "limits": "You run the hardware; needs a separate execution client over the Engine API to follow mainnet; staking carries offline/slash risk (see launchpad FAQs)"
+    "limits": "You run the hardware; needs a separate execution client over the Engine API to follow mainnet; staking carries offline/slash risk (see launchpad FAQs)",
+    "alternatives": [
+      "prysm",
+      "teku"
+    ]
   },
   {
     "slug": "prysm",
@@ -1451,7 +1455,22 @@
     "freeTier": "Free; GPL-3.0, self-hosted (no Prysm token)",
     "limits": "You run the hardware; needs a separate execution client over the Engine API to follow mainnet; staking carries offline/slash risk (docs FAQ: downtime penalties if the execution client goes down; Ethereum launchpad is the recommended deposit path)",
     "alternatives": [
-      "lighthouse"
+      "lighthouse",
+      "teku"
+    ]
+  },
+  {
+    "slug": "teku",
+    "name": "Teku",
+    "url": "https://consensys.com/teku",
+    "category": "RPC & Nodes",
+    "pricing": "Free (open source)",
+    "desc": "Consensys' Java Ethereum consensus client: a full beacon node plus validator client (one process or separate), connecting to a separate execution client over the Engine API (--ee-endpoint and a JWT secret, typically localhost:8551). Maintained by the same team as Besu; docs cover institutional staking features such as external key management, metrics, and the standard Ethereum beacon REST API. Docs at docs.teku.consensys.com. GitHub Consensys/teku (Apache-2.0; latest stable v26.10.3, 27 Oct 2026).",
+    "freeTier": "Free; Apache-2.0, self-hosted (no Teku token)",
+    "limits": "You run the hardware; needs a separate execution client over the Engine API to follow mainnet; staking carries offline/slash risk (docs: do not pass the same validator keys to both a combined process and a separate validator client)",
+    "alternatives": [
+      "lighthouse",
+      "prysm"
     ]
   }
 ]
