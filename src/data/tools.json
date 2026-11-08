@@ -1443,7 +1443,8 @@
     "alternatives": [
       "prysm",
       "teku",
-      "nimbus"
+      "nimbus",
+      "lodestar"
     ]
   },
   {
@@ -1458,7 +1459,8 @@
     "alternatives": [
       "lighthouse",
       "teku",
-      "nimbus"
+      "nimbus",
+      "lodestar"
     ]
   },
   {
@@ -1473,7 +1475,8 @@
     "alternatives": [
       "lighthouse",
       "prysm",
-      "nimbus"
+      "nimbus",
+      "lodestar"
     ]
   },
   {
@@ -1488,7 +1491,24 @@
     "alternatives": [
       "lighthouse",
       "prysm",
-      "teku"
+      "teku",
+      "lodestar"
+    ]
+  },
+  {
+    "slug": "lodestar",
+    "name": "Lodestar",
+    "url": "https://lodestar.chainsafe.io",
+    "category": "RPC & Nodes",
+    "pricing": "Free (open source)",
+    "desc": "ChainSafe's TypeScript Ethereum consensus client: a beacon node plus a separate validator client, connecting to a separate execution client over the Engine API (--jwtSecret and --execution.urls, default http://localhost:8551; multiple execution URLs supported). Docs cover JWT setup for Geth, Nethermind, Besu, Erigon and Reth, plus TypeScript libraries (@lodestar/api and others) for Ethereum TS projects. Docs at chainsafe.github.io/lodestar. GitHub ChainSafe/lodestar (Apache-2.0; latest stable v1.50.1, 22 Oct 2026).",
+    "freeTier": "Free; Apache-2.0, self-hosted (no Lodestar token; grant/donation funded)",
+    "limits": "You run the hardware (docs: consensus-only minimum 8 GB RAM and 130 GB SSD; 32 GB RAM and a 4 TB SSD recommended if the execution client is on the same host); needs a separate execution client over the Engine API to follow mainnet; staking carries offline/slash risk (docs: slashing protection is enabled by default and cannot be disabled)",
+    "alternatives": [
+      "lighthouse",
+      "prysm",
+      "teku",
+      "nimbus"
     ]
   }
 ]
