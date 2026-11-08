@@ -1440,5 +1440,18 @@
     "desc": "Sigma Prime's Rust Ethereum consensus client for the Beacon Chain: validator duties, attestation processing, fork choice, finality, and the Engine API to an execution client (Geth/Reth/Nethermind/Besu/Erigon). Production since Beacon Chain genesis (Dec 2020); docs in the Lighthouse Book. GitHub sigp/lighthouse (Apache-2.0; latest stable v8.3.2, 23 Oct 2026).",
     "freeTier": "Free; Apache-2.0, self-hosted (no Lighthouse token; grant/donation funded)",
     "limits": "You run the hardware; needs a separate execution client over the Engine API to follow mainnet; staking carries offline/slash risk (see launchpad FAQs)"
+  },
+  {
+    "slug": "prysm",
+    "name": "Prysm",
+    "url": "https://www.offchain.io/prysm",
+    "category": "RPC & Nodes",
+    "pricing": "Free (open source)",
+    "desc": "Offchain Labs' Go Ethereum consensus client (Ethereum Consensus / proof-of-stake spec): beacon node plus an optional validator client to stake ETH, connecting to a separate execution client (Geth/Nethermind/Besu) over the Engine API (JWT or IPC). One of the first consensus clients at The Merge; docs at prysm.offchainlabs.com. GitHub OffchainLabs/prysm (GPL-3.0; latest stable v7.3.1, 22 Oct 2026).",
+    "freeTier": "Free; GPL-3.0, self-hosted (no Prysm token)",
+    "limits": "You run the hardware; needs a separate execution client over the Engine API to follow mainnet; staking carries offline/slash risk (docs FAQ: downtime penalties if the execution client goes down; Ethereum launchpad is the recommended deposit path)",
+    "alternatives": [
+      "lighthouse"
+    ]
   }
 ]
