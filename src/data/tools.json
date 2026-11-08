@@ -909,7 +909,8 @@
     "freeTier": "Free to install (extension source on GitHub: MetaMask/metamask-extension)",
     "limits": "Network gas fees apply; custom license per repo (not a standard OSI license)",
     "alternatives": [
-      "rabby"
+      "rabby",
+      "rainbow"
     ]
   },
   {
@@ -920,7 +921,11 @@
     "pricing": "Free",
     "desc": "Open-source browser-extension wallet for Ethereum and EVM chains, built for DeFi; injects the standard window.ethereum provider, so dapps that support MetaMask-style wallets work with it.",
     "freeTier": "Free to install (source on GitHub: RabbyHub/Rabby)",
-    "limits": "Network gas fees apply; custom license per repo (not a standard OSI license)"
+    "limits": "Network gas fees apply; custom license per repo (not a standard OSI license)",
+    "alternatives": [
+      "metamask",
+      "rainbow"
+    ]
   },
   {
     "slug": "phantom",
@@ -933,7 +938,8 @@
     "limits": "Network fees apply; closed-source app; Sui support deprecated per docs",
     "alternatives": [
       "metamask",
-      "rabby"
+      "rabby",
+      "rainbow"
     ]
   },
   {
@@ -1509,6 +1515,21 @@
       "prysm",
       "teku",
       "nimbus"
+    ]
+  },
+  {
+    "slug": "rainbow",
+    "name": "Rainbow",
+    "url": "https://rainbow.me",
+    "category": "Wallets & Custody",
+    "pricing": "Free",
+    "desc": "Self-custody Ethereum wallet: iOS and Android apps plus a browser extension for Chrome, Brave, Edge, Firefox and Arc (rainbow-me/rainbow README). The extension supports Arbitrum, Optimism, Base, Polygon, Avalanche and Zora out of the box, with built-in send, bridge and swap, plus watch-wallet impersonation for dapps (rainbow-me/browser-extension README). Homepage (rainbow.me) also positions it as a trading app for crypto, tokenized stocks, commodities, prediction markets (Polymarket) and perps up to 50x on Bitcoin, the S&P 500, gold and oil (powered by Hyperliquid); trades earn $RNBW, with a Rainbow Black upgrade tier. GitHub rainbow-me/rainbow (GPL-3.0; latest mobile release v2.0.47, 3 Nov 2026) and rainbow-me/browser-extension (GPL-3.0; latest v1.6.11, 8 Jun 2026). The same GitHub org publishes RainbowKit, listed separately.",
+    "freeTier": "Free to install (iOS, Android, and browser extension; GPL-3.0 source at rainbow-me/rainbow and rainbow-me/browser-extension)",
+    "limits": "Network fees apply; homepage lists leveraged perps (up to 50x via Hyperliquid), $RNBW trading rewards and a Rainbow Black upgrade. Not an embedded-wallet SDK (see RainbowKit).",
+    "alternatives": [
+      "metamask",
+      "rabby",
+      "phantom"
     ]
   }
 ]
