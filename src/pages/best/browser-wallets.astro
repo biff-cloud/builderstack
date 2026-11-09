@@ -1,10 +1,11 @@
 ---
 import Base from "../../layouts/Base.astro"; import tools from "../../data/tools.json"; import Featured from "../../components/Featured.astro";
-// Sources checked 2026-10-30: metamask.io, rabby.io, phantom.com return 200; facts from each tool's README or docs (see tool pages).
+// Sources checked 2026-10-30: metamask.io, rabby.io, phantom.com return 200; rainbow-me/browser-extension checked 2026-11-09; facts from each tool's README or docs (see tool pages).
 const picks = [
   { slug: "metamask", src: "https://github.com/MetaMask/metamask-extension", label: "Source", note: "The default injected window.ethereum provider most dapps test against. Test here first if you ship an EVM dapp. Chrome, Chromium browsers and Firefox." },
   { slug: "rabby", src: "https://github.com/RabbyHub/Rabby", label: "Source", note: "Open-source EVM extension built for DeFi users. Injects the same window.ethereum provider, so a dapp that works with MetaMask-style wallets works here too. Worth a second test pass." },
   { slug: "phantom", src: "https://docs.phantom.com", label: "Docs", note: "The most common injected wallet on Solana, also covering Ethereum, Bitcoin, Base, Polygon and HyperEVM. Extension plus iOS and Android apps; Phantom Connect SDKs if you want embedded wallets too." },
+  { slug: "rainbow", src: "https://github.com/rainbow-me/browser-extension", label: "Source", note: "EVM extension for Chrome, Brave, Edge, Firefox and Arc, with Arbitrum, Optimism, Base, Polygon, Avalanche and Zora built in. Watch-wallet impersonation lets you open your dapp as any address. Also iOS and Android apps." },
 ].map(p => ({ ...p, t: tools.find(t => t.slug === p.slug) })).filter(p => p.t);
 ---
 <Base title="Best browser wallets for dapp developers — BuilderStack" description={`Browser-extension wallets to test and support in your dapp: ${picks.map(p => p.t.name).join(", ")}.`}>
